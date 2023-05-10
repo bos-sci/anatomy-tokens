@@ -1,0 +1,20 @@
+$border-color-primary: $neutral-00;
+$border-color-ghost: $neutral-100;
+$border-color-accent: $action-primary-40; // TODO: rename to be more semantic and add actual accent border colors like accent tags
+$border-color-subtle: $neutral-80;
+$border-color-error: $feedback-error-40;
+
+@mixin border-gradient-accent {
+  border-width: space(sm);
+  border-style: solid;
+  border-image-source: $gradient-accent;
+  border-image-slice: 1;
+}
+
+// TODO: build out more radii e.g. -square, -circle, -rounded, etc.
+// And rename border-radius to something more specific
+$border-radius: 0.25rem;
+
+$border-width-xxs: space(xxs);
+$border-width-xs: space(xs);
+$border-width-sm: space(sm);

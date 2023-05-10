@@ -1,0 +1,23 @@
+// TODO: look for consistently sized things (icons, etc.)
+
+:root {
+  --app-width: 100%;
+}
+
+@media (min-width: $breakpoint-lg) {
+  :root {
+    --app-width: 60rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  :root {
+    --app-width: 71.25rem;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  :root {
+    --app-width: 82.5rem;
+  }
+}
