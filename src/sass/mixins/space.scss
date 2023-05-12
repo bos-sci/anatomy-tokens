@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $space: (
   xxs: 0.063rem,
   xs: 0.125rem,
@@ -19,10 +21,4 @@ $space: (
   }
   @warn "Unknown `#{$key}` in $space";
   @return null;
-}
-
-// TODO: create all the space utilities (automate)
-// Look at how people are handling naming for margin/padding spacing tokens
-.bsds-mt-6x {
-  margin-top: space(6x);
 }

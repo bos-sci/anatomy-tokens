@@ -1,0 +1,25 @@
+// Utilities
+
+@mixin bsds-modifier-error-text {
+  display: block;
+  padding: 0 0 0 space(3x);
+  background-image: url("../../assets/images/icon-error.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: space(2x);
+  color: $feedback-error-40;
+  @include font-size($fs-base);
+  @include font-family-base-regular;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0) !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
