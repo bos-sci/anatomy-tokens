@@ -23,8 +23,7 @@
   outline: 0;
 }
 
-// TODO: rename to focus-readonly
-@mixin focus-disabled {
+@mixin focus-readonly {
   @include focus-default;
   outline-color: $neutral-60;
 }
