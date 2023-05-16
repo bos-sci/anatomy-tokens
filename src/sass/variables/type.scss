@@ -1,15 +1,15 @@
-// TODO: Look into how other people are handling web fonts in tokens. Can we ship this?
 @font-face {
   font-family: "SST-Roman";
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url("../fonts/SST-Roman/SST-Roman.eot");
-  src: url("../fonts/SST-Roman/SST-Roman.woff2") format("woff2"),
-    url("../fonts/SST-Roman/SST-Roman.woff") format("woff"),
-    url("../fonts/SST-Roman/SST-Roman.ttf") format("truetype"),
-    url("../fonts/SST-Roman/SST-Roman.svg#SST-Roman") format("svg"),
-    url("../fonts/SST-Roman/SST-Roman.eot?#iefix") format("embedded-opentype");
+  src: url("../../fonts/SST-Roman/SST-Roman.eot");
+  src: url("../../fonts/SST-Roman/SST-Roman.woff2") format("woff2"),
+    url("../../fonts/SST-Roman/SST-Roman.woff") format("woff"),
+    url("../../fonts/SST-Roman/SST-Roman.ttf") format("truetype"),
+    url("../../fonts/SST-Roman/SST-Roman.svg#SST-Roman") format("svg"),
+    url("../../fonts/SST-Roman/SST-Roman.eot?#iefix")
+      format("embedded-opentype");
 }
 
 @font-face {
@@ -17,12 +17,13 @@
   font-style: normal;
   font-weight: 500 900;
   font-display: fallback;
-  src: url("../fonts/SST-Heavy/SST-Heavy.eot");
-  src: url("../fonts/SST-Heavy/SST-Heavy.woff2") format("woff2"),
-    url("../fonts/SST-Heavy/SST-Heavy.woff") format("woff"),
-    url("../fonts/SST-Heavy/SST-Heavy.ttf") format("truetype"),
-    url("../fonts/SST-Heavy/SST-Heavy.svg#SST-Heavy") format("svg"),
-    url("../fonts/SST-Heavy/SST-Heavy.eot?#iefix") format("embedded-opentype");
+  src: url("../../fonts/SST-Heavy/SST-Heavy.eot");
+  src: url("../../fonts/SST-Heavy/SST-Heavy.woff2") format("woff2"),
+    url("../../fonts/SST-Heavy/SST-Heavy.woff") format("woff"),
+    url("../../fonts/SST-Heavy/SST-Heavy.ttf") format("truetype"),
+    url("../../fonts/SST-Heavy/SST-Heavy.svg#SST-Heavy") format("svg"),
+    url("../../fonts/SST-Heavy/SST-Heavy.eot?#iefix")
+      format("embedded-opentype");
 }
 
 $font-family-base-regular: "SST-Roman", sans-serif;
@@ -30,8 +31,4 @@ $font-family-base-heavy: "SST-Heavy", sans-serif;
 $font-weight-regular: 400;
 $font-weight-heavy: 900;
 
-$text-color-primary: $neutral-00;
-$text-color-ghost: $neutral-100;
-
-// TODO: ask Catie how we name this and check other peoples tokens for examples
-$letter-spacing-x: 0.075rem;
+$letter-spacing-increase: 0.075rem;

@@ -1,8 +1,11 @@
 {
-  "name": "anatomy-tokens",
+  "name": "@boston-scientific/anatomy-tokens",
   "version": "1.0.0",
   "description": "Design tokens for Boston Scientific's Anatomy Design System",
   "main": "index.js",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
     "build": "node src/scss-to-css.js && postcss lib/tokens.css > lib/tokens.min.css && cp -R src/sass lib/sass",
