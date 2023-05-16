@@ -1,6 +1,9 @@
 const fs = require("fs");
 const sass = require("sass");
 const path = require("path");
+const postcss = require("postcss");
+const cssnano = require("cssnano");
+const combineSelectors = require("postcss-combine-duplicated-selectors");
 
 const paths = {
   src: "src",
@@ -182,7 +185,17 @@ const buildCssFromSass = () => {
 
   // Compiles sass (with converted variables) to css
   const compiledCSS = sass.compile(paths.build + "/tokens.scss");
-  fs.writeFileSync(paths.lib + "/tokens.css", compiledCSS.css);
+  // Combine duplicate selectors
+  postcss([combineSelectors()])
+    .process(compiledCSS.css, { from: paths.lib + "/tokens.css" })
+    .then((result) => fs.writeFileSync(paths.lib + "/tokens.css", result.css));
+
+  // Create minified css file
+  postcss([cssnano()])
+    .process(compiledCSS.css, { from: paths.lib + "/tokens.css" })
+    .then((result) =>
+      fs.writeFileSync(paths.lib + "/tokens.min.css", result.css)
+    );
 
   // Delete build directory
   fs.rmSync(paths.build, { recursive: true, force: true });

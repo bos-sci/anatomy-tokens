@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node src/scss-to-css.js && postcss lib/tokens.css > lib/tokens.min.css",
+    "build": "node src/scss-to-css.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "cssnano": "^6.0.1",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
     "sass": "^1.62.1"
   }
 }
