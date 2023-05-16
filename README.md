@@ -2,12 +2,12 @@
 
 Design tokens for Boston Scientific's Anatomy Design System.
 
-## Scripts
+## Quick start
 
-In the project directory, you can run:
+### Install via package manager
 
-## `npm run build`
+`npm install @boston-scientific/anatomy-tokens`
 
-Builds the tokens for production in the `lib` folder. The output includes scss and minified css.
+### Include via CDN
 
-**Currently this command only work on MacOS due to the use of the `cp` command**
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@1.0.0/lib/tokens.min.css"`
