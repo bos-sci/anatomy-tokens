@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node scss-to-css.js",
+    "build": "node scss-to-css.js && node updateVersions.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
