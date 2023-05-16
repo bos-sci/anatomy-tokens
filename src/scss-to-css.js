@@ -2,6 +2,15 @@ const fs = require("fs");
 const sass = require("sass");
 const path = require("path");
 
+const paths = {
+  src: "src",
+  build: "build",
+  lib: "lib",
+  get sass() {
+    return this.src + "/sass";
+  },
+};
+
 /**
  * Variables to be ignored when translating from scss variables to css variables.
  * These are ignored as there is no 1-1 equivalent way to do these in css.
@@ -86,12 +95,39 @@ const createFolder = (folderName) => {
 };
 
 /**
- * Checks if the path points to a file (not a directory).
+ * Checks if the path points to a file.
  * @param {string} fileName
  * @return {boolean}
  */
 const isFile = (fileName) => {
   return fs.lstatSync(fileName).isFile();
+};
+
+/**
+ * Checks if the path points to a directory.
+ * @param {string} fileName
+ * @return {boolean}
+ */
+const isDirectory = (fileName) => {
+  return fs.lstatSync(fileName).isDirectory();
+};
+
+/**
+ * Recursively copies a directory and its contents.
+ * @param {string} from
+ * @param {string} to
+ */
+const copyDir = (from, to) => {
+  createFolder(to);
+  const dirContents = fs.readdirSync(from);
+  dirContents.forEach((node) => {
+    const fullPath = path.join(from, node);
+    if (isFile(fullPath)) {
+      fs.copyFileSync(fullPath, path.join(to, node));
+    } else if (isDirectory(fullPath)) {
+      copyDir(fullPath, path.join(to, node));
+    }
+  });
 };
 
 /**
@@ -113,12 +149,6 @@ const getFiles = (dirPath) => {
  *
  */
 const buildCssFromSass = () => {
-  const paths = {
-    src: "src/sass",
-    build: "build",
-    lib: "lib",
-  };
-
   // Create temporary build folders to write sass with css custom properties to
   createFolder(paths.build);
   createFolder(paths.build + "/variables");
@@ -128,26 +158,26 @@ const buildCssFromSass = () => {
   createFolder(paths.lib);
 
   // Convert sass variables to css custom properties and output to temporary build folder
-  const varFiles = getFiles(paths.src + "/variables");
+  const varFiles = getFiles(paths.sass + "/variables");
   varFiles.forEach((file) => {
     const scss = fs.readFileSync(file, {
       encoding: "utf8",
     });
     // Convert sass vars into css custom properties
     const convertedVars = convertVarInstances(convertVarDeclarations(scss));
-    fs.writeFileSync(file.replace(paths.src, paths.build), convertedVars);
+    fs.writeFileSync(file.replace(paths.sass, paths.build), convertedVars);
   });
 
   // Copy over global and mixins to build folder
-  fs.copyFileSync(paths.src + "/tokens.scss", paths.build + "/tokens.scss");
-  const mixinFiles = getFiles(paths.src + "/mixins");
+  fs.copyFileSync(paths.sass + "/tokens.scss", paths.build + "/tokens.scss");
+  const mixinFiles = getFiles(paths.sass + "/mixins");
   mixinFiles.forEach((file) => {
     const scss = fs.readFileSync(file, {
       encoding: "utf8",
     });
     // Convert sass var instances in mixins to use the newly converted css custom properties
     const convertedVars = convertVarInstances(scss);
-    fs.writeFileSync(file.replace(paths.src, paths.build), convertedVars);
+    fs.writeFileSync(file.replace(paths.sass, paths.build), convertedVars);
   });
 
   // Compiles sass (with converted variables) to css
@@ -159,3 +189,5 @@ const buildCssFromSass = () => {
 };
 
 buildCssFromSass();
+copyDir(paths.sass, paths.lib + "/sass");
+copyDir(paths.src + "/fonts", paths.lib + "/fonts");

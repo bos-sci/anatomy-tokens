@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node src/scss-to-css.js && postcss lib/tokens.css > lib/tokens.min.css && cp -R src/sass lib/sass",
+    "build": "node src/scss-to-css.js && postcss lib/tokens.css > lib/tokens.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
