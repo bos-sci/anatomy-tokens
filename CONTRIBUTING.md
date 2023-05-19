@@ -1,6 +1,6 @@
 # Anatomy Tokens
 
-Design tokens for Boston Scientific's Anatomy Design System.
+Design tokens for Anatomy, Boston Scientific's global design system.
 
 ## Scripts
 
