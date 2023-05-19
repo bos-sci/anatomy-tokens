@@ -16,8 +16,8 @@ $space: (
 );
 
 @function space($key) {
-  @if map-has-key($space, $key) {
-    @return map-get($space, $key);
+  @if map.has-key($space, $key) {
+    @return map.get($space, $key);
   }
   @warn "Unknown `#{$key}` in $space";
   @return null;
