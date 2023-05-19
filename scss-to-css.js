@@ -66,6 +66,10 @@ const convertVarDeclarations = (scss) => {
 
 /**
  * Converts all sass variable instances into css custom property instances.
+ * Parses through each character, looks for $ and collects chars in a buffer until a invalid var name character
+ * is reached, or a : is reached. If a : is reached the buffer is added to the output with no modifications
+ * and the buffer is emptied. If an invalid var name character is reached (whitespace, etc),
+ * the variable in the buffer is converted to a css custom property.
  * e.g. $foo -> var(--foo)
  * @param {string} scss
  * @return {string}
@@ -74,24 +78,31 @@ const convertVarInstances = (scss) => {
   let convertedScss = '';
   let buffer = '';
   for (let char of scss) {
+    // Finds $ and starts the buffer
     if (char === '$') {
       buffer += char;
     } else {
       if (!buffer) {
+        // Adds chars to output if no active buffer in progress
         convertedScss += char;
       } else {
         if (char === ':') {
+          // Excludes variable declarations
           convertedScss += buffer + char;
           buffer = '';
         } else if (!char.match(/[a-zA-Z0-9_-]/)) {
+          // Buffer complete
           if (ignoredVars.some((v) => buffer.slice(1).match(new RegExp(v)))) {
+            // Ignores vars from ignoredVars array
             convertedScss += buffer + char;
             buffer = '';
           } else {
+            // Converts scss var instance to css custom property instance at end of var name
             convertedScss += `var(--${buffer.slice(1)})${char}`;
             buffer = '';
           }
         } else {
+          // Adds to buffer
           buffer += char;
         }
       }
