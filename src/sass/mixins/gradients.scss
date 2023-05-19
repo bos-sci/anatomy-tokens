@@ -25,7 +25,7 @@
     $accent-primary-60
   );
   background-size: 400% 100%;
-  content: "";
+  content: '';
   animation: animated-gradient 10s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {

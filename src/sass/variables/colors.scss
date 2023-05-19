@@ -66,20 +66,8 @@ $gradient-brand: linear-gradient(
   $accent-primary-60,
   $accent-secondary-60
 ); // NOTE: only approved for limited use
-$gradient-primary: linear-gradient(
-  90deg,
-  $accent-secondary-60,
-  $action-primary-40
-);
-$gradient-secondary: linear-gradient(
-  90deg,
-  $accent-primary-60,
-  $action-primary-20
-);
-$gradient-accent: linear-gradient(
-  90deg,
-  $action-primary-60,
-  $accent-primary-60
-);
+$gradient-primary: linear-gradient(90deg, $accent-secondary-60, $action-primary-40);
+$gradient-secondary: linear-gradient(90deg, $accent-primary-60, $action-primary-20);
+$gradient-accent: linear-gradient(90deg, $action-primary-60, $accent-primary-60);
 $gradient-assertive: linear-gradient(36deg, $neutral-00, $action-primary-20);
 $gradient-subtle: linear-gradient(322deg, $neutral-100, $neutral-95);
