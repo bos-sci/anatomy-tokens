@@ -1,24 +1,24 @@
-const fs = require("fs");
-const sass = require("sass");
-const path = require("path");
-const postcss = require("postcss");
-const cssnano = require("cssnano");
-const combineSelectors = require("postcss-combine-duplicated-selectors");
+const fs = require('fs');
+const sass = require('sass');
+const path = require('path');
+const postcss = require('postcss');
+const cssnano = require('cssnano');
+const combineSelectors = require('postcss-combine-duplicated-selectors');
 
 const paths = {
-  src: "src",
-  build: "build",
-  lib: "lib",
+  src: 'src',
+  build: 'build',
+  lib: 'lib',
   get sass() {
-    return this.src + "/sass";
-  },
+    return this.src + '/sass';
+  }
 };
 
 /**
  * Variables to be ignored when translating from scss variables to css variables.
  * These are ignored as there is no 1-1 equivalent way to do these in css.
  */
-const ignoredVars = ["fs-.+", "space", "key", "key"];
+const ignoredVars = ['fs-.+', 'space', 'key', 'key'];
 
 /**
  * Converts all sass variable declarations into css custom property declarations.
@@ -31,19 +31,16 @@ const convertVarDeclarations = (scss) => {
     /\$([\w-]+):\s*([^;{]+)(?:[;\n]|(?=\s*\}))/g, // Regex to get all sass var declarations e.g. $foo: 'bar'
     (match) => {
       // Split variables into name and value
-      const pair = [
-        match.slice(0, match.indexOf(":")),
-        match.slice(match.indexOf(":") + 1).replaceAll(";", ""),
-      ];
+      const pair = [match.slice(0, match.indexOf(':')), match.slice(match.indexOf(':') + 1).replaceAll(';', '')];
       const name = pair[0].slice(1);
       const values = ((value) => {
         // If sass var has multiple values, split into multiple css custom properties e.g. space var
-        if (value.trim().charAt(0) == "(") {
+        if (value.trim().charAt(0) == '(') {
           return value
-            .replaceAll("\n", "")
+            .replaceAll('\n', '')
             .trim()
             .slice(1, -1)
-            .split(",")
+            .split(',')
             .map((v) => v.trim())
             .filter((v) => v);
         } else {
@@ -55,11 +52,11 @@ const convertVarDeclarations = (scss) => {
       if (values.length > 1) {
         const valueString = values
           .map((value) => {
-            const subName = value.split(":")[0];
-            const subValue = value.split(":")[1];
+            const subName = value.split(':')[0];
+            const subValue = value.split(':')[1];
             return `--${name}-${subName}: ${subValue};`;
           })
-          .join("\n");
+          .join('\n');
         return `:root {${valueString}}`;
       }
       return `:root {--${name}: ${values[0]}}`;
@@ -74,14 +71,41 @@ const convertVarDeclarations = (scss) => {
  * @return {string}
  */
 const convertVarInstances = (scss) => {
-  return scss.replaceAll(/\$[a-zA-Z0-9_-]+/g, (match) => {
-    const varName = match.slice(1);
-    if (ignoredVars.some((v) => varName.match(new RegExp(v)))) {
-      return match;
+  let convertedScss = '';
+  let buffer = '';
+  for (let char of scss) {
+    if (char === '$') {
+      buffer += char;
+    } else {
+      if (!buffer) {
+        convertedScss += char;
+      } else {
+        if (char === ':') {
+          convertedScss += buffer + char;
+          buffer = '';
+        } else if (!char.match(/[a-zA-Z0-9_-]/)) {
+          if (ignoredVars.some((v) => buffer.slice(1).match(new RegExp(v)))) {
+            convertedScss += buffer + char;
+            buffer = '';
+          } else {
+            convertedScss += `var(--${buffer.slice(1)})${char}`;
+            buffer = '';
+          }
+        } else {
+          buffer += char;
+        }
+      }
     }
-    return `var(--${varName})`;
-  });
+  }
+
+  return convertedScss;
 };
+
+/**
+ * Looks for all instance of the space function (excluding its declaration) and wraps them in the sass interpolator #{ }
+ * @param {string} scss
+ */
+const convertSpaceFns = (scss) => scss.replaceAll(/\b(space\((?!\$key\)).*?)\)/g, (match) => `#{${match}}`);
 
 /**
  * Checks to see if a folder of the provided name already exists. If not, it creates the folder.
@@ -154,53 +178,55 @@ const getFiles = (dirPath) => {
 const buildCssFromSass = () => {
   // Create temporary build folders to write sass with css custom properties to
   createFolder(paths.build);
-  createFolder(paths.build + "/variables");
-  createFolder(paths.build + "/mixins");
+  createFolder(paths.build + '/variables');
+  createFolder(paths.build + '/mixins');
 
-  // Create lib folder which will contain the final tokens package
+  // Create lib folders
   createFolder(paths.lib);
+  createFolder(paths.lib + '/css');
 
   // Convert sass variables to css custom properties and output to temporary build folder
-  const varFiles = getFiles(paths.sass + "/variables");
+  const varFiles = getFiles(paths.sass + '/variables');
   varFiles.forEach((file) => {
     const scss = fs.readFileSync(file, {
-      encoding: "utf8",
+      encoding: 'utf8'
     });
     // Convert sass vars into css custom properties
-    const convertedVars = convertVarInstances(convertVarDeclarations(scss));
+    const convertedVars = convertSpaceFns(convertVarInstances(convertVarDeclarations(scss)));
     fs.writeFileSync(file.replace(paths.sass, paths.build), convertedVars);
   });
 
   // Copy over global and mixins to build folder
-  fs.copyFileSync(paths.sass + "/tokens.scss", paths.build + "/tokens.scss");
-  const mixinFiles = getFiles(paths.sass + "/mixins");
+  fs.copyFileSync(paths.sass + '/tokens.scss', paths.build + '/tokens.scss');
+  const mixinFiles = getFiles(paths.sass + '/mixins');
   mixinFiles.forEach((file) => {
     const scss = fs.readFileSync(file, {
-      encoding: "utf8",
+      encoding: 'utf8'
     });
     // Convert sass var instances in mixins to use the newly converted css custom properties
-    const convertedVars = convertVarInstances(scss);
+    const convertedVars = convertSpaceFns(convertVarInstances(scss));
     fs.writeFileSync(file.replace(paths.sass, paths.build), convertedVars);
   });
 
   // Compiles sass (with converted variables) to css
-  const compiledCSS = sass.compile(paths.build + "/tokens.scss");
+  const compiledCSS = sass.compile(paths.build + '/tokens.scss');
   // Combine duplicate selectors
   postcss([combineSelectors()])
-    .process(compiledCSS.css, { from: paths.lib + "/tokens.css" })
-    .then((result) => fs.writeFileSync(paths.lib + "/tokens.css", result.css));
+    .process(compiledCSS.css, { from: paths.lib + '/css/tokens.css' })
+    .then((result) => fs.writeFileSync(paths.lib + '/css/tokens.css', result.css));
 
   // Create minified css file
   postcss([cssnano()])
-    .process(compiledCSS.css, { from: paths.lib + "/tokens.css" })
-    .then((result) =>
-      fs.writeFileSync(paths.lib + "/tokens.min.css", result.css)
-    );
+    .process(compiledCSS.css, { from: paths.lib + '/css/tokens.css' })
+    .then((result) => fs.writeFileSync(paths.lib + '/css/tokens.min.css', result.css));
 
   // Delete build directory
   fs.rmSync(paths.build, { recursive: true, force: true });
 };
 
+// Delete lib directory to start each build fresh
+fs.rmSync(paths.lib, { recursive: true, force: true });
+
 buildCssFromSass();
-copyDir(paths.sass, paths.lib + "/sass");
-copyDir(paths.src + "/fonts", paths.lib + "/fonts");
+copyDir(paths.sass, paths.lib + '/sass');
+copyDir(paths.src + '/fonts', paths.lib + '/fonts');
