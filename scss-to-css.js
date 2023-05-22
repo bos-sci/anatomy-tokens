@@ -123,12 +123,8 @@ const convertSpaceFns = (scss) => scss.replaceAll(/\b(space\((?!\$key\)).*?)\)/g
  * @param {string} folderName
  */
 const createFolder = (folderName) => {
-  try {
-    if (!fs.existsSync(folderName)) {
-      fs.mkdirSync(folderName);
-    }
-  } catch (err) {
-    console.error(err);
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName);
   }
 };
 
