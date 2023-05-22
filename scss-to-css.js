@@ -17,8 +17,69 @@ const paths = {
 /**
  * Variables to be ignored when translating from scss variables to css variables.
  * These are ignored as there is no 1-1 equivalent way to do these in css.
+ * This is used in convertVarInstances.
  */
 const ignoredVars = ['fs-.+', 'space', 'key', 'key'];
+
+/**
+ * Checks to see if a folder of the provided name already exists. If not, it creates the folder.
+ * @param {string} folderName
+ */
+const createFolder = (folderName) => {
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName);
+  }
+};
+
+/**
+ * Checks if the path points to a file.
+ * @param {string} fileName
+ * @return {boolean}
+ */
+const isFile = (fileName) => {
+  return fs.lstatSync(fileName).isFile();
+};
+
+/**
+ * Checks if the path points to a directory.
+ * @param {string} fileName
+ * @return {boolean}
+ */
+const isDirectory = (fileName) => {
+  return fs.lstatSync(fileName).isDirectory();
+};
+
+/**
+ * Recursively copies a directory and its contents.
+ * @param {string} from
+ * @param {string} to
+ */
+const copyDir = (from, to) => {
+  createFolder(to);
+  const dirContents = fs.readdirSync(from);
+  dirContents.forEach((node) => {
+    const fullPath = path.join(from, node);
+    if (isFile(fullPath)) {
+      fs.copyFileSync(fullPath, path.join(to, node));
+    } else if (isDirectory(fullPath)) {
+      copyDir(fullPath, path.join(to, node));
+    }
+  });
+};
+
+/**
+ * Gets all the files in a directory. Filters out any sub-directories.
+ * @param {string} dirPath
+ * @return {string[]}
+ */
+const getFiles = (dirPath) => {
+  return fs
+    .readdirSync(dirPath)
+    .map((fileName) => {
+      return path.join(dirPath, fileName);
+    })
+    .filter(isFile);
+};
 
 /**
  * Converts all sass variable declarations into css custom property declarations.
@@ -117,66 +178,6 @@ const convertVarInstances = (scss) => {
  * @param {string} scss
  */
 const convertSpaceFns = (scss) => scss.replaceAll(/\b(space\((?!\$key\)).*?)\)/g, (match) => `#{${match}}`);
-
-/**
- * Checks to see if a folder of the provided name already exists. If not, it creates the folder.
- * @param {string} folderName
- */
-const createFolder = (folderName) => {
-  if (!fs.existsSync(folderName)) {
-    fs.mkdirSync(folderName);
-  }
-};
-
-/**
- * Checks if the path points to a file.
- * @param {string} fileName
- * @return {boolean}
- */
-const isFile = (fileName) => {
-  return fs.lstatSync(fileName).isFile();
-};
-
-/**
- * Checks if the path points to a directory.
- * @param {string} fileName
- * @return {boolean}
- */
-const isDirectory = (fileName) => {
-  return fs.lstatSync(fileName).isDirectory();
-};
-
-/**
- * Recursively copies a directory and its contents.
- * @param {string} from
- * @param {string} to
- */
-const copyDir = (from, to) => {
-  createFolder(to);
-  const dirContents = fs.readdirSync(from);
-  dirContents.forEach((node) => {
-    const fullPath = path.join(from, node);
-    if (isFile(fullPath)) {
-      fs.copyFileSync(fullPath, path.join(to, node));
-    } else if (isDirectory(fullPath)) {
-      copyDir(fullPath, path.join(to, node));
-    }
-  });
-};
-
-/**
- * Gets all the files in a directory. Filters out any sub-directories.
- * @param {string} dirPath
- * @return {string[]}
- */
-const getFiles = (dirPath) => {
-  return fs
-    .readdirSync(dirPath)
-    .map((fileName) => {
-      return path.join(dirPath, fileName);
-    })
-    .filter(isFile);
-};
 
 /**
  * Converts sass tokens into equivalent css tokens where possible.
