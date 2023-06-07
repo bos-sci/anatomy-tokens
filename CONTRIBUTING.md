@@ -8,8 +8,8 @@ Only the Sass variable declarations in the variables folder will be converted to
 
 ## Scripts
 
-In the project directory, you can run:
+In the project directory, run:
 
 ## `npm run build`
 
-Builds the tokens for production in the `lib` folder. The output includes scss and minified css.
+This builds the tokens for production in the `lib` folder and outputs Sass and minified CSS.
