@@ -10,11 +10,10 @@ Only the Sass variable declarations in the variables folder will be converted to
 
 1. Create branch off of `develop` using the pattern `release/vX.Y.Z`
 2. `npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]`
-3. Create a pull request from `release/vX.Y.Z` into `develop`
-4. Create a pull request from `develop` into `main`
-5. Checkout and pull `main`
-
-6. `npm run build`
+3. `npm run build`
+4. Create a pull request from `release/vX.Y.Z` into `develop`
+5. Create a pull request from `develop` into `main`
+6. Checkout and pull `main`
 7. `npm publish --access public`
    - Ensure you are logged in locally in the npm CLI
 
