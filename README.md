@@ -1,4 +1,4 @@
-# Anatomy Tokens
+# Anatomy tokens
 
 Design tokens for Anatomy, Boston Scientific's global design system.
 
