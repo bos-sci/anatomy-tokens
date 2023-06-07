@@ -6,7 +6,7 @@ Design tokens for Anatomy, Boston Scientific's global design system.
 
 Anatomy tokens ship with Sass and CSS versions. Sass is located at `lib/sass`. CSS is located at `lib/css/tokens.css` and `lib/css/tokens.min.css`.
 
-### Install via package manager
+### Install via npm
 
 ```bash
 npm install @boston-scientific/anatomy-tokens
