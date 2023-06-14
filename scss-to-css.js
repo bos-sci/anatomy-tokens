@@ -219,36 +219,25 @@ const buildCssFromSass = () => {
 
   // Compiles sass (with converted variables) to css
   const compiledCSS = sass.compile(paths.build + '/tokens.scss');
+
+  // Append css from src to bottom of compiled sass
+  const srcCSS = fs.readFileSync(paths.src + '/css/tokens.css', {
+    encoding: 'utf8'
+  });
+  const builtCSS = compiledCSS.css + '\n' + srcCSS;
+
   // Combine duplicate selectors
   postcss([combineSelectors()])
-    .process(compiledCSS.css, { from: paths.lib + '/css/tokens.css' })
+    .process(builtCSS, { from: paths.lib + '/css/tokens.css' })
     .then((result) => fs.writeFileSync(paths.lib + '/css/tokens.css', result.css));
 
   // Create minified css file
   postcss([cssnano()])
-    .process(compiledCSS.css, { from: paths.lib + '/css/tokens.css' })
+    .process(builtCSS, { from: paths.lib + '/css/tokens.css' })
     .then((result) => fs.writeFileSync(paths.lib + '/css/tokens.min.css', result.css));
 
   // Delete build directory
   fs.rmSync(paths.build, { recursive: true, force: true });
-};
-
-const addTypeScale = () => {
-  const sassVars = Object.keys(fonts).map((fontName) => {
-    const fontValues = Object.keys(fonts[fontName]).map((bp) => {
-      return `${bp}: ${fonts[fontName][bp]}`;
-    });
-    return `$fs-${fontName}: (${fontValues.join(', ')});`;
-  });
-
-  const typeMixinFile = fs.readFileSync(paths.sass + '/mixins/type.scss', {
-    encoding: 'utf8'
-  });
-
-  fs.writeFileSync(
-    paths.lib + '/sass/mixins/type.scss',
-    typeMixinFile.replace('// INSERT: fonts', sassVars.join('\n'))
-  );
 };
 
 // Delete lib directory to start each build fresh
@@ -257,5 +246,3 @@ fs.rmSync(paths.lib, { recursive: true, force: true });
 buildCssFromSass();
 copyDir(paths.sass, paths.lib + '/sass');
 copyDir(paths.src + '/fonts', paths.lib + '/fonts');
-
-addTypeScale();
