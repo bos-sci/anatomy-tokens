@@ -8,10 +8,6 @@ $fs-breakpoints: (
   lg: 992px,
   xl: 1200px
 );
-$fs-base: (
-  null: 1rem,
-  lg: 1.125rem
-);
 $fs-h1: (
   null: 2.101rem,
   lg: 2.574rem
@@ -33,6 +29,10 @@ $fs-h5: (
   lg: 1.328rem
 );
 $fs-h6: (
+  null: 1rem,
+  lg: 1.125rem
+);
+$fs-body: (
   null: 1rem,
   lg: 1.125rem
 );
