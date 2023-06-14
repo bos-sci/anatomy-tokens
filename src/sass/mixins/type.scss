@@ -8,44 +8,8 @@ $fs-breakpoints: (
   lg: 992px,
   xl: 1200px
 );
-$fs-h1: (
-  null: 2.101rem,
-  lg: 2.574rem
-);
-$fs-h2: (
-  null: 1.811rem,
-  lg: 2.181rem
-);
-$fs-h3: (
-  null: 1.561rem,
-  lg: 1.848rem
-);
-$fs-h4: (
-  null: 1.346rem,
-  lg: 1.5666rem
-);
-$fs-h5: (
-  null: 1.16rem,
-  lg: 1.328rem
-);
-$fs-h6: (
-  null: 1rem,
-  lg: 1.125rem
-);
-$fs-body: (
-  null: 1rem,
-  lg: 1.125rem
-);
-$fs-body-assertive: (
-  null: 1.16rem,
-  lg: 1.328rem
-);
-$fs-body-subtle: (
-  null: 0.906rem
-);
-$fs-small: (
-  null: 0.75rem
-);
+
+// INSERT: fonts
 
 @mixin font-size($fs-map, $fs-breakpoints: $fs-breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {

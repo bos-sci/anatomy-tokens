@@ -233,9 +233,29 @@ const buildCssFromSass = () => {
   fs.rmSync(paths.build, { recursive: true, force: true });
 };
 
+const addTypeScale = () => {
+  const sassVars = Object.keys(fonts).map((fontName) => {
+    const fontValues = Object.keys(fonts[fontName]).map((bp) => {
+      return `${bp}: ${fonts[fontName][bp]}`;
+    });
+    return `$fs-${fontName}: (${fontValues.join(', ')});`;
+  });
+
+  const typeMixinFile = fs.readFileSync(paths.sass + '/mixins/type.scss', {
+    encoding: 'utf8'
+  });
+
+  fs.writeFileSync(
+    paths.lib + '/sass/mixins/type.scss',
+    typeMixinFile.replace('// INSERT: fonts', sassVars.join('\n'))
+  );
+};
+
 // Delete lib directory to start each build fresh
 fs.rmSync(paths.lib, { recursive: true, force: true });
 
 buildCssFromSass();
 copyDir(paths.sass, paths.lib + '/sass');
 copyDir(paths.src + '/fonts', paths.lib + '/fonts');
+
+addTypeScale();
