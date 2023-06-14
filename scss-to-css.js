@@ -1,9 +1,10 @@
-const fs = require('fs');
-const sass = require('sass');
-const path = require('path');
-const postcss = require('postcss');
-const cssnano = require('cssnano');
-const combineSelectors = require('postcss-combine-duplicated-selectors');
+import fs from 'fs';
+import sass from 'sass';
+import path from 'path';
+import postcss from 'postcss';
+import cssnano from 'cssnano';
+import combineSelectors from 'postcss-combine-duplicated-selectors';
+import fonts from './fonts.js';
 
 const paths = {
   src: 'src',
