@@ -8,13 +8,8 @@
   }
 }
 
+// NOTE: only approved for use on Teaser hero in hero container and Wizard Nav
 @mixin animated-gradient-brand {
-  // NOTE: only approved for use on Teaser hero in hero container and Wizard Nav
-  position: absolute;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  height: space(sm);
   background: $gradient-brand;
   background-image: linear-gradient(
     90deg,
@@ -25,7 +20,6 @@
     $accent-primary-60
   );
   background-size: 400% 100%;
-  content: '';
   animation: animated-gradient 10s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
@@ -36,7 +30,6 @@
 }
 
 @mixin animated-gradient-primary {
-  z-index: 1;
   background: $gradient-primary;
   background-image: linear-gradient(
     90deg,
@@ -56,7 +49,6 @@
 }
 
 @mixin animated-gradient-secondary {
-  z-index: 1;
   background: $gradient-secondary;
   background-image: linear-gradient(
     90deg,
