@@ -21,6 +21,7 @@
     "url": "https://github.com/bos-sci/anatomy-tokens/issues"
   },
   "homepage": "https://github.com/bos-sci/anatomy-tokens#readme",
+  "type": "module",
   "devDependencies": {
     "cssnano": "^6.0.1",
     "postcss": "^8.4.23",
