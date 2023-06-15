@@ -9,3 +9,10 @@
   padding: 0 !important;
   white-space: nowrap !important;
 }
+
+@mixin decorative-bar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: space(sm);
+}
