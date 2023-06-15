@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node scss-to-css.js && node updateVersions.js",
+    "build": "node scss-to-css.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "node updateVersions.js && git add README.md"
   },
