@@ -23,3 +23,7 @@ In the project directory, run:
 ## `npm run build`
 
 This builds the tokens for production in the `lib` folder and outputs Sass and minified CSS.
+
+## `npm run version`
+
+This updates the tokens version number in the readme, and stages the readme changes in git. This runs [automatically](https://docs.npmjs.com/cli/v7/commands/npm-version#description) during the `npm version` script before the commit and after the package version change.
