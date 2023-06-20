@@ -26,4 +26,4 @@ This builds the tokens for production in the `lib` folder and outputs Sass and m
 
 ## `npm run version`
 
-This updates the tokens version number in the readme, and stages the readme changes in git. This runs [automatically](https://docs.npmjs.com/cli/v7/commands/npm-version#description) during the `npm version` script before the commit and after the package version change.
+This updates the tokens version number in the readme, and stages the readme changes in git. This runs [automatically](https://docs.npmjs.com/cli/v7/commands/npm-version#description) during the `npm version` script before the commit and after the package version change. It does not need to be run manually.
