@@ -4,7 +4,6 @@ import path from 'path';
 import postcss from 'postcss';
 import cssnano from 'cssnano';
 import combineSelectors from 'postcss-combine-duplicated-selectors';
-import fonts from './fonts.js';
 
 const paths = {
   src: 'src',
