@@ -5,6 +5,15 @@ import postcss from 'postcss';
 import cssnano from 'cssnano';
 import combineSelectors from 'postcss-combine-duplicated-selectors';
 
+// These match scss breakpoints variables. If those change, these also need to change.
+const breakpoints = {
+  'breakpoint-sm-min': '36rem',
+  'breakpoint-md-min': '48rem',
+  'breakpoint-lg-min': '62rem',
+  'breakpoint-xl-min': '75rem',
+  'breakpoint-xxl-min': '87.5rem'
+};
+
 const paths = {
   src: 'src',
   build: 'build',
@@ -156,6 +165,14 @@ const convertVarInstances = (scss) => {
           if (ignoredVars.some((v) => buffer.slice(1).match(new RegExp(v)))) {
             // Ignores vars from ignoredVars array
             convertedScss += buffer + char;
+            buffer = '';
+          } else if (buffer.slice(1).match(/breakpoint-.+/)) {
+            // Ignore breakpoint vars
+            // Currently only used in media queries, since custom properties don't work in media queries,
+            // we are swapping the scss vars for their rem values
+            // If we need to use more custom properties in media queries or if we need to use breakpoint vars outside
+            // of media queries, this will need to be changed to generalized solution
+            convertedScss += breakpoints[buffer.slice(1)] + char;
             buffer = '';
           } else {
             // Converts scss var instance to css custom property instance at end of var name
