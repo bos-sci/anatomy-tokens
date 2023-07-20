@@ -12,6 +12,8 @@
   --fs-small: 0.75rem;
 
   /* Space scale */
+  --space-negative-xs: -0.125rem;
+  --space-negative-xxs: -0.063rem;
   --space-xxs: 0.063rem;
   --space-xs: 0.125rem;
   --space-sm: 0.25rem;
