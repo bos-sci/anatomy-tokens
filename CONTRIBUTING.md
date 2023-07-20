@@ -10,6 +10,7 @@ Only the Sass variable declarations in the variables folder will be converted to
 
 1. Create branch off of `develop` using the pattern `release/vX.Y.Z`
 2. `npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]`
+   - Push the auto-generated git tag to origin e.g. `git push origin vX.Y.Z`
 3. Create a pull request from `release/vX.Y.Z` into `develop`
 4. Create a pull request from `develop` into `main`
    - The package will be built and deployed automatically\* via a GitHub Action that triggers on merge into main
