@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @keyframes animated-gradient {
   0% {
     background-position: 100% 0;
@@ -8,68 +10,48 @@
   }
 }
 
-// NOTE: only approved for use on Teaser hero in hero container and Wizard Nav
-@mixin animated-gradient-brand {
-  background: $gradient-brand;
-  background-image: linear-gradient(
-    90deg,
-    $brand-primary,
-    $accent-primary-60,
-    $accent-secondary-60,
-    $brand-primary,
-    $accent-primary-60
-  );
-  background-size: 400% 100%;
-  animation: animated-gradient 10s linear infinite;
+// Gradient mixin direction variables
+$gradient-directions: (
+  '36deg': 36deg,
+  '84deg': 84deg,
+  '90deg': 90deg,
+  '135deg': 135deg,
+  '180deg': 180deg,
+  '270deg': 270deg,
+  '322deg': 322deg
+);
 
-  @media (prefers-reduced-motion: reduce) {
-    background-image: $gradient-brand;
-    background-size: 100% 100%;
-    animation: none;
-  }
+// Gradient mixin function
+
+@mixin linear-gradient($direction, $style) {
+  $gradient-direction: map.get($gradient-directions, $direction);
+
+  background: linear-gradient($gradient-direction, $style);
 }
 
-@mixin animated-gradient-primary {
-  background: $gradient-primary;
-  background-image: linear-gradient(
-    90deg,
-    $accent-secondary-60,
-    $action-primary-40,
-    $accent-secondary-60,
-    $action-primary-40
-  );
-  background-size: 300% 100%;
-  animation: animated-gradient 10s linear infinite;
+@mixin border-gradient($direction, $style) {
+  $gradient-direction: map.get($gradient-directions, $direction);
 
-  @media (prefers-reduced-motion: reduce) {
-    background-image: $gradient-primary;
-    background-size: 100% 100%;
-    animation: none;
-  }
-}
-
-@mixin animated-gradient-secondary {
-  background: $gradient-secondary;
-  background-image: linear-gradient(
-    90deg,
-    $accent-primary-60,
-    $action-primary-20,
-    $accent-primary-60,
-    $action-primary-20
-  );
-  background-size: 300% 100%;
-  animation: animated-gradient 10s linear infinite;
-
-  @media (prefers-reduced-motion: reduce) {
-    background-image: $gradient-secondary;
-    background-size: 100% 100%;
-    animation: none;
-  }
-}
-
-@mixin border-gradient-accent {
-  border-width: space(sm);
   border-style: solid;
-  border-image-source: $gradient-accent;
+  border-image-source: linear-gradient($gradient-direction, $style);
   border-image-slice: 1;
+}
+
+@mixin animated-gradient($style) {
+  $animated-gradient-style: map.get($animated-gradients, $style);
+
+  background: $animated-gradient-style;
+  background-image: linear-gradient(90deg, $animated-gradient-style);
+  background-size: 300% 100%;
+  animation: animated-gradient 10s linear infinite;
+
+  @if $style == $brand {
+    background-size: 400% 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    background-image: $animated-gradient-style;
+    background-size: 100% 100%;
+    animation: none;
+  }
 }

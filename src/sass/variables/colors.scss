@@ -71,3 +71,34 @@ $gradient-secondary: linear-gradient(90deg, $accent-primary-60, $action-primary-
 $gradient-accent: linear-gradient(90deg, $action-primary-60, $accent-primary-60);
 $gradient-assertive: linear-gradient(36deg, $neutral-00, $action-primary-20);
 $gradient-subtle: linear-gradient(322deg, $neutral-100, $neutral-95);
+
+// Gradient mixin color variables
+$brand: $brand-primary, $accent-primary-60, $accent-secondary-60;
+$primary: $accent-secondary-60, $action-primary-40;
+$secondary: $accent-primary-60, $action-primary-20;
+$accent: $action-primary-60, $accent-primary-60;
+$assertive: $neutral-00, $action-primary-20;
+$subtle: $neutral-95, $neutral-100;
+
+// Gradient mixin animated color variables
+$animated-gradients: (
+  $brand: (
+    $brand-primary,
+    $accent-primary-60,
+    $accent-secondary-60,
+    $brand-primary,
+    $accent-primary-60
+  ),
+  $primary: (
+    $accent-secondary-60,
+    $action-primary-40,
+    $accent-secondary-60,
+    $action-primary-40
+  ),
+  $secondary: (
+    $accent-primary-60,
+    $action-primary-20,
+    $accent-primary-60,
+    $action-primary-20
+  )
+);
