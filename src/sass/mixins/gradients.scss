@@ -67,6 +67,19 @@
   }
 }
 
+@mixin animated-gradient-subtle {
+  background: $gradient-subtle;
+  background-image: linear-gradient(90deg, $neutral-100, $neutral-95, $neutral-100, $neutral-95);
+  background-size: 300% 100%;
+  animation: animated-gradient 10s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    background-image: $gradient-subtle;
+    background-size: 100% 100%;
+    animation: none;
+  }
+}
+
 @mixin border-gradient-accent {
   border-width: space(sm);
   border-style: solid;
