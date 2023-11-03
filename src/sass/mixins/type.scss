@@ -43,10 +43,12 @@ $fs-body-assertive: (
   lg: 1.328rem
 );
 $fs-body-subtle: (
-  null: 0.906rem
+  null: 0.906rem,
+  lg: 0.906rem
 );
 $fs-small: (
-  null: 0.75rem
+  null: 0.75rem,
+  lg: 0.75rem
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $fs-breakpoints) {
