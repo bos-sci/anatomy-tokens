@@ -29,6 +29,7 @@
 }
 
 /* Breakpoint lg */
+/* stylelint-disable-next-line media-feature-name-value-allowed-list */
 @media (min-width: 62rem) {
   :root {
     /* Type scale */
