@@ -10,7 +10,14 @@
     "sass": "sass build/global.scss:build/global.css --watch",
     "build": "node scss-to-css.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "node updateVersions.js && git add README.md"
+    "version": "node updateVersions.js && git add README.md",
+    "lint:styles": "stylelint \"**/*.scss\"",
+    "fix:styles": "stylelint --fix \"**/*.scss\"",
+    "lint:scripts": "eslint .",
+    "fix:scripts": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:all": "npm run lint:styles && npm run lint:scripts && npm run format:check"
   },
   "repository": {
     "type": "git",
@@ -24,10 +31,27 @@
   "homepage": "https://github.com/bos-sci/anatomy-tokens#readme",
   "type": "module",
   "devDependencies": {
+    "@boston-scientific/eslint-config": "^0.0.3",
+    "@boston-scientific/prettier-config": "^1.0.1",
+    "@boston-scientific/stylelint-config": "^1.1.0",
     "cssnano": "^6.0.1",
+    "eslint": "^8.53.0",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
     "postcss-combine-duplicated-selectors": "^10.0.3",
-    "sass": "^1.62.1"
+    "prettier": "^3.0.3",
+    "sass": "^1.62.1",
+    "stylelint": "^14.16.1"
+  },
+  "prettier": "@boston-scientific/prettier-config",
+  "stylelint": {
+    "extends": [
+      "@boston-scientific/stylelint-config"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@boston-scientific/eslint-config"
+    ]
   }
 }
