@@ -105,7 +105,7 @@ const convertVarDeclarations = (scss) => {
       const name = pair[0].slice(1);
       const values = ((value) => {
         // If sass var has multiple values, split into multiple css custom properties e.g. space var
-        if (value.trim().charAt(0) == '(') {
+        if (value.trim().charAt(0) === '(') {
           return value
             .replaceAll('\n', '')
             .trim()
@@ -147,7 +147,7 @@ const convertVarDeclarations = (scss) => {
 const convertVarInstances = (scss) => {
   let convertedScss = '';
   let buffer = '';
-  for (let char of scss) {
+  for (const char of scss) {
     // Finds $ and starts the buffer
     if (char === '$') {
       buffer += char;
@@ -162,6 +162,7 @@ const convertVarInstances = (scss) => {
           buffer = '';
         } else if (!char.match(/[a-zA-Z0-9_-]/)) {
           // Buffer complete
+          // eslint-disable-next-line no-loop-func
           if (ignoredVars.some((v) => buffer.slice(1).match(new RegExp(v)))) {
             // Ignores vars from ignoredVars array
             convertedScss += buffer + char;
