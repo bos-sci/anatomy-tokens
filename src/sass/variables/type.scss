@@ -3,12 +3,12 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: url('../../fonts/SST-Roman/SST-Roman.eot');
-  src: url('../../fonts/SST-Roman/SST-Roman.woff2') format('woff2'),
-    url('../../fonts/SST-Roman/SST-Roman.woff') format('woff'),
-    url('../../fonts/SST-Roman/SST-Roman.ttf') format('truetype'),
-    url('../../fonts/SST-Roman/SST-Roman.svg#SST-Roman') format('svg'),
-    url('../../fonts/SST-Roman/SST-Roman.eot?#iefix') format('embedded-opentype');
+  src: url('#{$font-path}/SST-Roman/SST-Roman.eot');
+  src: url('#{$font-path}/SST-Roman/SST-Roman.woff2') format('woff2'),
+    url('#{$font-path}/SST-Roman/SST-Roman.woff') format('woff'),
+    url('#{$font-path}/SST-Roman/SST-Roman.ttf') format('truetype'),
+    url('#{$font-path}/SST-Roman/SST-Roman.svg#SST-Roman') format('svg'),
+    url('#{$font-path}/SST-Roman/SST-Roman.eot?#iefix') format('embedded-opentype');
 }
 
 @font-face {
@@ -16,12 +16,12 @@
   font-style: normal;
   font-weight: 500 900;
   font-display: fallback;
-  src: url('../../fonts/SST-Heavy/SST-Heavy.eot');
-  src: url('../../fonts/SST-Heavy/SST-Heavy.woff2') format('woff2'),
-    url('../../fonts/SST-Heavy/SST-Heavy.woff') format('woff'),
-    url('../../fonts/SST-Heavy/SST-Heavy.ttf') format('truetype'),
-    url('../../fonts/SST-Heavy/SST-Heavy.svg#SST-Heavy') format('svg'),
-    url('../../fonts/SST-Heavy/SST-Heavy.eot?#iefix') format('embedded-opentype');
+  src: url('#{$font-path}/SST-Heavy/SST-Heavy.eot');
+  src: url('#{$font-path}/SST-Heavy/SST-Heavy.woff2') format('woff2'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.woff') format('woff'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.ttf') format('truetype'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.svg#SST-Heavy') format('svg'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.eot?#iefix') format('embedded-opentype');
 }
 
 $font-family-base-regular: 'SST-Roman', sans-serif;
