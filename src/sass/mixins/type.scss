@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-property-value-allowed-list */
 @use 'sass:map';
 
 // NOTE: changes to the type class names will need to be done in code and contentful (foundations > typography)
@@ -49,6 +50,10 @@ $fs-body-subtle: (
 $fs-small: (
   null: 0.75rem,
   lg: 0.75rem
+);
+$fs-display: (
+  null: 2.436rem,
+  lg: 3.036rem
 );
 
 @mixin font-size($fs-map, $fs-breakpoints: $fs-breakpoints) {

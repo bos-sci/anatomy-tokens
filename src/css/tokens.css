@@ -10,6 +10,7 @@
   --fs-body-assertive: 1.16rem;
   --fs-body-subtle: 0.906rem;
   --fs-small: 0.75rem;
+  --fs-display: 2.436rem;
 
   /* Space scale */
   --space-negative-xs: -0.125rem;
@@ -29,6 +30,7 @@
 }
 
 /* Breakpoint lg */
+/* stylelint-disable-next-line media-feature-name-value-allowed-list */
 @media (min-width: 62rem) {
   :root {
     /* Type scale */
@@ -42,5 +44,6 @@
     --fs-body-assertive: 1.328rem;
     --fs-body-subtle: 0.906rem;
     --fs-small: 0.75rem;
+    --fs-display: 3.036rem;
   }
 }

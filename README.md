@@ -15,5 +15,8 @@ npm install @boston-scientific/anatomy-tokens
 ### Include via CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@3.2.0/lib/css/tokens.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@4.0.0/lib/css/tokens.min.css"
+/>
 ```
