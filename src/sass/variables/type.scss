@@ -1,5 +1,8 @@
 /* stylelint-disable declaration-property-value-allowed-list */
 /* stylelint-disable at-rule-allowed-list */
+/* stylelint-disable annotation-no-unknown */
+$font-path: '@boston-scientific/anatomy-tokens/lib/fonts' !default;
+
 @font-face {
   font-family: 'SST-Roman';
   font-style: normal;
