@@ -9,7 +9,8 @@ $font-path: '../../fonts' !default;
   font-weight: 400;
   font-display: fallback;
   src: url('#{$font-path}/SST-Roman/SST-Roman.eot');
-  src: url('#{$font-path}/SST-Roman/SST-Roman.woff2') format('woff2'),
+  src:
+    url('#{$font-path}/SST-Roman/SST-Roman.woff2') format('woff2'),
     url('#{$font-path}/SST-Roman/SST-Roman.woff') format('woff'),
     url('#{$font-path}/SST-Roman/SST-Roman.ttf') format('truetype'),
     url('#{$font-path}/SST-Roman/SST-Roman.svg#SST-Roman') format('svg'),
@@ -22,7 +23,8 @@ $font-path: '../../fonts' !default;
   font-weight: 500 900;
   font-display: fallback;
   src: url('#{$font-path}/SST-Heavy/SST-Heavy.eot');
-  src: url('#{$font-path}/SST-Heavy/SST-Heavy.woff2') format('woff2'),
+  src:
+    url('#{$font-path}/SST-Heavy/SST-Heavy.woff2') format('woff2'),
     url('#{$font-path}/SST-Heavy/SST-Heavy.woff') format('woff'),
     url('#{$font-path}/SST-Heavy/SST-Heavy.ttf') format('truetype'),
     url('#{$font-path}/SST-Heavy/SST-Heavy.svg#SST-Heavy') format('svg'),
