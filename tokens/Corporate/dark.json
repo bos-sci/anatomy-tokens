@@ -1,0 +1,23 @@
+{
+  "action":{
+    "type": "color",
+    "action-default": {
+      "value": "{action-primary colors.action-primary-60}"
+    },
+    "action-hover": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "action-active": {
+      "value": "{action-primary colors.action-primary-40}"
+    }
+  },
+  "accent":{
+    "type": "color",
+    "accent-callout": {
+      "value": "{accent-primary colors.accent-primary-60}"
+    },
+    "accent-featured-tag": {
+      "value": "{accent-primary colors.accent-primary-30}"
+    }
+  }
+}
