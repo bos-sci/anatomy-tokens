@@ -149,10 +149,6 @@
       "feedback-warning-95": {
         "value": "#fbf7e9"
       }
-    },
-    "TEST": {
-      "value": "#ff1e61",
-      "type": "color"
     }
   },
   "Watchman": {
@@ -307,11 +303,16 @@
       }
     }
   },
-  "$themes": [],
   "$metadata": {
-    "tokenSetOrder": [
-      "Corporate",
-      "Watchman"
-    ]
+    "tokenSetOrder": {
+      "0": {
+        "value": "Corporate",
+        "type": "other"
+      },
+      "1": {
+        "value": "Watchman",
+        "type": "other"
+      }
+    }
   }
 }

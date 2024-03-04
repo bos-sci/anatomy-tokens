@@ -1,6 +1,8 @@
 {
   "tokenSetOrder": [
     "Corporate",
-    "Watchman"
+    "Watchman",
+    "primitiveColors",
+    "primitiveSpacing"
   ]
 }
