@@ -1,0 +1,63 @@
+{
+  "accordion": {
+    "type": "color",
+
+    "accordion-default-border": {
+      "value": "{borders.border-subtle}"
+    },
+    "accordion-default-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "accordion-default-icon": {
+      "value": "{icon.icon-color-primary}"
+    },
+    "accordion-hover-text": {
+      "value": "{text.text-color-action}"
+    },
+    "accordion-hover-icon": {
+      "value": "{text.text-color-action}"
+    },
+    "accordion-active-text": {
+      "value": "{text.text-color-action}"
+    },
+    "accordion-active-icon": {
+      "value": "{icons.icon-color-action}"
+    },
+    "accordion-error-icon": {
+      "value": "{icons.icon-color-error}"
+    },
+    "accordion-error-background": {
+      "value": "{surfaces.surface-error}"
+    },
+    "accordion-error-border": {
+      "value": "{borders.border-error}"
+    },
+    "accordion-success-icon": {
+      "value": "{icons.icon-color-success}"
+    },
+    "accordion-success-background": {
+      "value": "{surfaces.surface-success}"
+    },
+    "accordion-success-border": {
+      "value": "{borders.border-success}"
+    },
+    "accordion-warning-icon": {
+      "value": "{icons.icon-color-warning}"
+    },
+    "accordion-warning-background": {
+      "value": "{surfaces.surface-warning}"
+    },
+    "accordion-warning-border": {
+      "value": "{borders.border-warning}"
+    }
+  },
+  "breadcrumbs": {
+    "type": "color",
+    "breadcrumbs-default-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "breadcrumbs-default-separator": {
+      "value": "{text.text-color-primary}"
+    }
+  }
+}
