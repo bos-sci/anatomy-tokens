@@ -38,6 +38,57 @@
       "value": "7.5rem"
     }
   },
+  "border": {
+    "type": "borderWidth",
+    "border-width-xxs": {
+      "value": "{spacing.space-xxs}"
+    },
+    "border-width-xs": {
+      "value": "{spacing.space-xs}"
+    },
+    "border-width-sm": {
+      "value": "{spacing.space-sm}"
+    }
+  },
+  "border-radius": {
+    "type": "spacing",
+    "border-radius-circle": {
+      "value": "50%"
+    },
+    "border-radius-sm": {
+      "value": "{spacing.space-sm}"
+    }
+  },
+  "breakpoints": {
+    "type": "spacing",
+    "breakpoint-sm-min": {
+      "value": "36rem"
+    },
+    "breakpoint-md-min": {
+      "value": "48rem"
+    },
+    "breakpoint-lg-min": {
+      "value": "62rem"
+    },
+    "breakpoint-xl-min": {
+      "value": "75rem"
+    },
+    "breakpoint-xxl-min": {
+      "value": "87.5rem"
+    }
+  },
+  "decorative icons": {
+    "type": "sizing",
+    "size-icon-decorative": {
+      "value": "{spacing.space-8x}"
+    }
+  },
+  "letter spacing": {
+    "type": "spacing",
+    "size-icon-decorative": {
+      "value": "0.075rem"
+    }
+  },
   "$themes": ["Corporate", "Watchman"],
   "$metadata": {
     "tokenSetOrder": [
