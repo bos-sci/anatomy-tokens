@@ -59,5 +59,104 @@
     "breadcrumbs-default-separator": {
       "value": "{text.text-color-primary}"
     }
+  },
+  "modal": {
+    "type": "color",
+    "modal-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "modal-default-background": {
+      "value": "{surfaces.surface-default}"
+    },
+    "modal-overlay": {
+      "value": "{surfaces.surface-default}"
+    },
+    "transparency-overlay-primary": {
+      "value": ""
+    }
+  },
+  "ribbon": {
+    "type": "color",
+    "ribbon-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "ribbon-default-background": {
+      "value": "{surfaces.surface-subtle}"
+    },
+    "ribbon-info-background": {
+      "value": "{surfaces.surface-informational}"
+    },
+    "ribbon-carbon-background": {
+      "value": ""
+    }
+  },
+  "skip link": {
+    "type": "color",
+    "skiplink-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "skiplink-background": {
+      "value": "{surfaces.surface-subtle}"
+    }
+  },
+  "tabs": {
+    "type": "color",
+    "tab-default-text": {
+      "value": "{text.text-color-subtle}"
+    },
+    "tab-selected-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "tab-hover-text": {
+      "value": "{text.text-color-action}"
+    },
+    "tab-active-text": {
+      "value": "{text.text-color-action}"
+    },
+    "tab-disabled-text": {
+      "value": "{text.text-color-disabled}"
+    },
+    "tab-default-border": {
+      "value": "{text.border-subtle}"
+    },
+    "tab-hover-border": {
+      "value": "{borders.border-action}"
+    },
+    "tab-active-border": {
+      "value": "{borders.border-action}"
+    },
+    "tab-selected-border": {
+      "value": "{borders.border-assertive}"
+    }
+  },
+  "tag": {
+    "type": "color",
+    "tag-default-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "tag-assertive-text": {
+      "value": "{text.text-color-inverse}"
+    },
+    "tag-assertive-background": {
+      "value": "{surfaces.surface-assertive}"
+    },
+    "tag-accent-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "tag-accent-border": {
+      "value": "{text.accent-gradient}"
+    },
+    "tag-featured-text": {
+      "value": "{text.text-color-inverse}"
+    },
+    "tag-featured-background": {
+      "value": "{text.accent-featured-tag}"
+    },
+    "tag-subtle-text": {
+      "value": "{text.text-color-primary}"
+    },
+    "tag-subtle-background": {
+      "value": "{surfaces.surface-subtle}"
+    }
   }
 }

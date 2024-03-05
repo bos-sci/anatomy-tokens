@@ -18,6 +18,9 @@
     },
     "accent-featured-tag": {
       "value": "{accent-primary colors.accent-primary-30}"
+    },
+    "accent-gradient": {
+      "value": ""
     }
   },
   "borders": {
