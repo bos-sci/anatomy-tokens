@@ -9,7 +9,7 @@
       "value": "{text.text-color-primary}"
     },
     "accordion-default-icon": {
-      "value": "{icon.icon-color-primary}"
+      "value": "{icons.icon-color-primary}"
     },
     "accordion-hover-text": {
       "value": "{text.text-color-action}"
