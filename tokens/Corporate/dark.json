@@ -170,5 +170,17 @@
     "surface-warning": {
       "value": "{feedback-warning colors.feedback-warning-60}"
     }
+  },
+  "transparencies": {
+    "type": "color",
+    "transparency-overlay-primary": {
+      "value": ""
+    },
+    "transparency-overlay-primary-inverse": {
+      "value": ""
+    },
+    "transparency-zero": {
+      "value": ""
+    }
   }
 }
