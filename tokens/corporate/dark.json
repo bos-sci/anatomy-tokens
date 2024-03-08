@@ -18,9 +18,6 @@
     },
     "accent-featured-tag": {
       "value": "{accent-primary colors.accent-primary-30}"
-    },
-    "accent-gradient": {
-      "value": "{accent-secondary colors.accent-secondary-60}"
     }
   },
   "borders": {
@@ -54,22 +51,6 @@
     },
     "decorative-icon-subtle-inverse": {
       "value": "{neutral colors.neutral-20}"
-    }
-  },
-  "dropshadows": {
-    "type": "dropShadow",
-    "x": 2,
-    "y": 2,
-    "spread": 1,
-    "blur": 2,
-    "dropshadow-primary": {
-      "color": "rgba({neutral colors.neutral-00}, 0)"
-    },
-    "dropshadow-secondary": {
-      "color": "rgba({neutral colors.neutral-00}, 0)"
-    },
-    "dropshadow-tertiary": {
-      "color": "rgba({neutral colors.neutral-00}, 0)"
     }
   },
   "focus": {
@@ -174,13 +155,13 @@
   "transparencies": {
     "type": "color",
     "transparency-overlay-primary": {
-      "value": ""
+      "value": "rgba(0, 0, 0, 0.6)"
     },
     "transparency-overlay-primary-inverse": {
-      "value": ""
+      "value": "rgba(255, 255, 255, 0.6)"
     },
     "transparency-zero": {
-      "value": ""
+      "value": "rgba(255, 255, 255, 0)"
     }
   }
 }

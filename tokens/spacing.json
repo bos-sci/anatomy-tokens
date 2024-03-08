@@ -85,13 +85,12 @@
   },
   "letter spacing": {
     "type": "spacing",
-    "size-icon-decorative": {
+    "letter-spacing-increase": {
       "value": "0.075rem"
     }
   },
   "$themes": ["Corporate", "Watchman"],
   "$metadata": {
-    "tokenSetOrder": [
-    ]
+    "tokenSetOrder": []
   }
 }

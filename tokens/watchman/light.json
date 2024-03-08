@@ -11,7 +11,7 @@
       "value": "{action-primary colors.action-primary-20}"
     }
   },
-  "accent":{
+  "accent": {
     "type": "color",
     "accent-callout": {
       "value": "{accent-primary colors.accent-primary-60}"
@@ -150,6 +150,18 @@
     },
     "surface-warning": {
       "value": "{feedback-warning colors.feedback-warning-95}"
+    }
+  },
+  "transparencies": {
+    "type": "color",
+    "transparency-overlay-primary": {
+      "value": "rgba(0, 0, 0, 0.6)"
+    },
+    "transparency-overlay-primary-inverse": {
+      "value": "rgba(255, 255, 255, 0.6)"
+    },
+    "transparency-zero": {
+      "value": "rgba(255, 255, 255, 0)"
     }
   }
 }

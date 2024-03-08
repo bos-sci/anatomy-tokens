@@ -7,47 +7,47 @@ StyleDictionary.registerTransform({
   transformer: (token) => token.name
 });
 
+const platformsConfig = {
+  transforms: ['name/shorten'],
+  options: {
+    outputReferences: true
+  }
+};
+
 const getConfig = (theme, mode) => ({
   platforms: {
     scss: {
       transformGroup: 'scss',
       buildPath: 'build/scss/',
-      transforms: ['name/shorten'],
-      options: {
-        outputReferences: true
-      },
       files: [
         {
           destination: `${theme}/${mode}.scss`,
           format: 'scss/variables'
         }
-      ]
+      ],
+      ...platformsConfig
     },
     less: {
       transformGroup: 'less',
       buildPath: 'build/less/',
-      options: {
-        outputReferences: true
-      },
       files: [
         {
           destination: `${theme}/${mode}.less`,
           format: 'less/variables'
         }
-      ]
+      ],
+      ...platformsConfig
     },
     css: {
       transformGroup: 'css',
       buildPath: 'build/css/',
-      options: {
-        outputReferences: true
-      },
       files: [
         {
           destination: `${theme}/${mode}.css`,
           format: 'css/variables'
         }
-      ]
+      ],
+      ...platformsConfig
     }
   }
 });

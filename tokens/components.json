@@ -204,9 +204,6 @@
     },
     "image-accent-caption-background": {
       "value": "{transparencies.transparency-overlay-primary}"
-    },
-    "image-accent-background": {
-      "value": "{accent.accent-gradient}"
     }
   },
   "modal": {
@@ -218,10 +215,7 @@
       "value": "{surfaces.surface-default}"
     },
     "modal-overlay": {
-      "value": "{surfaces.surface-default}"
-    },
-    "transparency-overlay-primary": {
-      "value": ""
+      "value": "{transparencies.transparency-overlay-primary}"
     }
   },
   "ribbon": {
@@ -236,7 +230,7 @@
       "value": "{surfaces.surface-informational}"
     },
     "ribbon-carbon-background": {
-      "value": ""
+      "value": "{accent-secondary colors.accent-secondary-60}"
     }
   },
   "skip link": {
@@ -306,9 +300,6 @@
     },
     "tag-accent-text": {
       "value": "{text.text-color-primary}"
-    },
-    "tag-accent-border": {
-      "value": "{accent.accent-gradient}"
     },
     "tag-featured-text": {
       "value": "{text.text-color-inverse}"
