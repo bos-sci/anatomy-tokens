@@ -18,7 +18,8 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:all": "npm run lint:styles && npm run lint:scripts && npm run format:check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "style-dictionary": "node buildTokens.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "prettier": "^3.0.3",
     "sass": "^1.62.1",
+    "style-dictionary": "^3.9.2",
     "stylelint": "^14.16.1"
   },
   "lint-staged": {
