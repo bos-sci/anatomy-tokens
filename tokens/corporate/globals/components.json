@@ -1,7 +1,6 @@
 {
   "accordion": {
     "type": "color",
-
     "accordion-default-border": {
       "value": "{borders.border-subtle}"
     },
@@ -136,7 +135,7 @@
     },
     "button-filter-text": {
       "value": "{text.text-color-primary}"
-     },
+    },
     "button-filter-icon": {
       "value": "{icons.icon-color-primary}"
     },
@@ -282,7 +281,7 @@
       "value": "{text.text-color-disabled}"
     },
     "tab-default-border": {
-      "value": "{text.border-subtle}"
+      "value": "{borders.border-subtle}"
     },
     "tab-hover-border": {
       "value": "{borders.border-action}"
@@ -309,13 +308,13 @@
       "value": "{text.text-color-primary}"
     },
     "tag-accent-border": {
-      "value": "{text.accent-gradient}"
+      "value": "{accent.accent-gradient}"
     },
     "tag-featured-text": {
       "value": "{text.text-color-inverse}"
     },
     "tag-featured-background": {
-      "value": "{text.accent-featured-tag}"
+      "value": "{accent.accent-featured-tag}"
     },
     "tag-subtle-text": {
       "value": "{text.text-color-primary}"
