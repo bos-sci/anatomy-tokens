@@ -18,7 +18,7 @@ const getConfig = (theme, mode) => ({
   platforms: {
     scss: {
       transformGroup: 'scss',
-      buildPath: 'build/scss/',
+      buildPath: 'lib/scss/',
       files: [
         {
           destination: `${theme}/${mode}.scss`,
@@ -29,7 +29,7 @@ const getConfig = (theme, mode) => ({
     },
     less: {
       transformGroup: 'less',
-      buildPath: 'build/less/',
+      buildPath: 'lib/less/',
       files: [
         {
           destination: `${theme}/${mode}.less`,
@@ -40,7 +40,7 @@ const getConfig = (theme, mode) => ({
     },
     css: {
       transformGroup: 'css',
-      buildPath: 'build/css/',
+      buildPath: 'lib/css/',
       files: [
         {
           destination: `${theme}/${mode}.css`,

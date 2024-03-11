@@ -19,7 +19,7 @@
     "format:write": "prettier --write .",
     "lint:all": "npm run lint:styles && npm run lint:scripts && npm run format:check",
     "prepare": "husky install",
-    "style-dictionary": "node buildTokens.js"
+    "style-dictionary": "node buildTokens.js && prettier --write \"lib\" && stylelint --fix \"lib\""
   },
   "repository": {
     "type": "git",
@@ -56,7 +56,13 @@
   "stylelint": {
     "extends": [
       "@boston-scientific/stylelint-config"
-    ]
+    ],
+    "ignoreFiles": [
+      "**/*.less"
+    ],
+    "rules": {
+      "color-no-hex": null
+    }
   },
   "eslintConfig": {
     "extends": [
