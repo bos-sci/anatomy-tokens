@@ -2,7 +2,7 @@
   "brand colors": {
     "type": "color",
     "brand-primary": {
-      "value": "#E57200"
+      "value": "#e57200"
     }
   },
   "neutral colors": {
@@ -11,22 +11,22 @@
       "value": "#000000"
     },
     "neutral-10": {
-      "value": "#2D3539"
+      "value": "#2d3539"
     },
     "neutral-20": {
-      "value": "#61737B"
+      "value": "#61737b"
     },
     "neutral-40": {
-      "value": "#8D9EA5"
+      "value": "#8d9ea5"
     },
     "neutral-60": {
-      "value": "#BECAD0"
+      "value": "#becad0"
     },
     "neutral-80": {
-      "value": "#E1E3E5"
+      "value": "#e1e3e5"
     },
     "neutral-95": {
-      "value": "#F0F1F1"
+      "value": "#f0f1f1"
     },
     "neutral-100": {
       "value": "#ffffff"
@@ -35,46 +35,46 @@
   "action-primary colors": {
     "type": "color",
     "action-primary-10": {
-      "value": "#00474D"
+      "value": "#00474d"
     },
     "action-primary-20": {
       "value": "#007780"
     },
     "action-primary-40": {
-      "value": "#00BECC"
+      "value": "#00becc"
     },
     "action-primary-60": {
-      "value": "#33F1FF"
+      "value": "#33f1ff"
     },
     "action-primary-80": {
-      "value": "#99F8FF"
+      "value": "#99f8ff"
     },
     "action-primary-95": {
-      "value": "#E6FDFF"
+      "value": "#e6fdff"
     },
     "action-primary-97": {
-      "value": "#F1FEFF"
+      "value": "#f1feff"
     }
   },
   "accent-primary colors": {
     "type": "color",
     "accent-primary-20": {
-      "value": "#B85B19"
+      "value": "#b85b19"
     },
     "accent-primary-30": {
-      "value": "#E67300"
+      "value": "#e67300"
     },
     "accent-primary-40": {
-      "value": "#FF8000"
+      "value": "#ff8000"
     },
     "accent-primary-60": {
-      "value": "#FF9933"
+      "value": "#ff9933"
     },
     "accent-primary-80": {
-      "value": "#FFD9B3"
+      "value": "#ffd9b3"
     },
     "accent-primary-95": {
-      "value": "#FFF2E6"
+      "value": "#fff2e6"
     }
   },
   "accent-secondary colors": {
@@ -83,70 +83,70 @@
       "value": "#012965"
     },
     "accent-secondary-40": {
-      "value": "#0153CC"
+      "value": "#0153cc"
     },
     "accent-secondary-60": {
-      "value": "#3485FE"
+      "value": "#3485fe"
     },
     "accent-secondary-80": {
-      "value": "#9AC2FE"
+      "value": "#9ac2fe"
     },
     "accent-secondary-95": {
-      "value": "#E6F0FF"
+      "value": "#e6f0ff"
     }
   },
   "feedback-error colors": {
     "type": "color",
     "feedback-error-20": {
-      "value": "#590D11"
+      "value": "#590d11"
     },
     "feedback-error-40": {
-      "value": "#B31921"
+      "value": "#b31921"
     },
     "feedback-error-60": {
-      "value": "#E64D54"
+      "value": "#e64d54"
     },
     "feedback-error-80": {
-      "value": "#F2A6AA"
+      "value": "#f2a6aa"
     },
     "feedback-error-95": {
-      "value": "#FCE9EA"
+      "value": "#fce9ea"
     }
   },
   "feedback-success colors": {
     "type": "color",
     "feedback-success-20": {
-      "value": "#004D41"
+      "value": "#004d41"
     },
     "feedback-success-40": {
       "value": "#008571"
     },
     "feedback-success-60": {
-      "value": "#00B398"
+      "value": "#00b398"
     },
     "feedback-success-80": {
-      "value": "#00E6C3"
+      "value": "#00e6c3"
     },
     "feedback-success-95": {
-      "value": "#80FFEC"
+      "value": "#80ffec"
     }
   },
   "feedback-warning colors": {
     "type": "color",
     "feedback-warning-20": {
-      "value": "#CC7A00"
+      "value": "#cc7a00"
     },
     "feedback-warning-40": {
-      "value": "#FF9900"
+      "value": "#ff9900"
     },
     "feedback-warning-60": {
-      "value": "#FFA825"
+      "value": "#ffa825"
     },
     "feedback-warning-80": {
-      "value": "#FFD699"
+      "value": "#ffd699"
     },
     "feedback-warning-95": {
-      "value": "#FFF5E6"
+      "value": "#fff5e6"
     }
   }
 }
