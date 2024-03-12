@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node scss-to-css.js",
+    "build": "node buildTokens.js && prettier --write \"lib\" && stylelint --fix \"lib\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "node updateVersions.js && git add README.md",
     "lint:styles": "stylelint \"**/*.scss\"",
@@ -18,8 +18,7 @@
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:all": "npm run lint:styles && npm run lint:scripts && npm run format:check",
-    "prepare": "husky install",
-    "style-dictionary": "node buildTokens.js && prettier --write \"lib\" && stylelint --fix \"lib\""
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
