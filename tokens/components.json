@@ -2,7 +2,7 @@
   "accordion": {
     "type": "color",
     "accordion-default-border": {
-      "value": "{borders.border-subtle}"
+      "value": "{borders.border-color-subtle}"
     },
     "accordion-default-text": {
       "value": "{text.text-color-primary}"
@@ -29,7 +29,7 @@
       "value": "{surfaces.surface-error}"
     },
     "accordion-error-border": {
-      "value": "{borders.border-error}"
+      "value": "{borders.border-color-error}"
     },
     "accordion-success-icon": {
       "value": "{icons.icon-color-success}"
@@ -38,7 +38,7 @@
       "value": "{surfaces.surface-success}"
     },
     "accordion-success-border": {
-      "value": "{borders.border-success}"
+      "value": "{borders.border-color-success}"
     },
     "accordion-warning-icon": {
       "value": "{icons.icon-color-warning}"
@@ -47,7 +47,7 @@
       "value": "{surfaces.surface-warning}"
     },
     "accordion-warning-border": {
-      "value": "{borders.border-warning}"
+      "value": "{borders.border-color-warning}"
     }
   },
   "breadcrumbs": {
@@ -68,7 +68,7 @@
       "value": "{icons.icon-color-action}"
     },
     "button-default-border": {
-      "value": "{borders.border-action}"
+      "value": "{borders.border-color-action}"
     },
     "button-default-background": {
       "value": "{surfaces.surface-default}"
@@ -98,7 +98,7 @@
       "value": "{text.text-color-inverse}"
     },
     "button-assertive-border": {
-      "value": "{borders.border-action}"
+      "value": "{borders.border-color-action}"
     },
     "button-assertive-background": {
       "value": "{action.action-default}"
@@ -128,7 +128,7 @@
       "value": "{icons.icon-color-disabled}"
     },
     "button-disabled-border": {
-      "value": "{borders.border-subtle}"
+      "value": "{borders.border-color-subtle}"
     },
     "button-disabled-background": {
       "value": "{surfaces.surface-subtle}"
@@ -140,7 +140,7 @@
       "value": "{icons.icon-color-primary}"
     },
     "button-filter-border": {
-      "value": "{borders.border-subtle}"
+      "value": "{borders.border-color-subtle}"
     },
     "button-filter-background": {
       "value": "{transparencies.transparency-zero}"
@@ -152,7 +152,7 @@
       "value": "{icons.icon-color-primary}"
     },
     "button-filter-hover-border": {
-      "value": "{borders.border-assertive}"
+      "value": "{borders.border-color-assertive}"
     },
     "button-filter-hover-background": {
       "value": "{transparencies.transparency-zero}"
@@ -164,7 +164,7 @@
       "value": "{icons.icon-color-primary}"
     },
     "button-filter-active-border": {
-      "value": "{borders.border-assertive}"
+      "value": "{borders.border-color-assertive}"
     },
     "button-filter-active-background": {
       "value": "{transparencies.transparency-zero}"
@@ -199,10 +199,10 @@
     "image-default-caption": {
       "value": "{text.text-color-primary}"
     },
-    "image-accent-caption": {
+    "image-inverse-caption": {
       "value": "{text.text-color-inverse}"
     },
-    "image-accent-caption-background": {
+    "image-inverse-caption-background": {
       "value": "{transparencies.transparency-overlay-primary}"
     }
   },
@@ -228,9 +228,6 @@
     },
     "ribbon-info-background": {
       "value": "{surfaces.surface-informational}"
-    },
-    "ribbon-carbon-background": {
-      "value": "{accent-secondary colors.accent-secondary-60}"
     }
   },
   "skip link": {
@@ -249,6 +246,9 @@
     },
     "stoplight-error": {
       "value": "{icons.icon-color-error}"
+    },
+    "stoplight-text-inverse": {
+      "value": "{text.text-color-inverse}"
     },
     "stoplight-success": {
       "value": "{icons.icon-color-success}"
@@ -275,16 +275,16 @@
       "value": "{text.text-color-disabled}"
     },
     "tab-default-border": {
-      "value": "{borders.border-subtle}"
+      "value": "{borders.border-color-subtle}"
     },
     "tab-hover-border": {
-      "value": "{borders.border-action}"
+      "value": "{borders.border-color-action}"
     },
     "tab-active-border": {
-      "value": "{borders.border-action}"
+      "value": "{borders.border-color-action}"
     },
     "tab-selected-border": {
-      "value": "{borders.border-assertive}"
+      "value": "{borders.border-color-assertive}"
     }
   },
   "tag": {

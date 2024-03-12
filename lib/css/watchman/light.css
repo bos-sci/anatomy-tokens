@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 11 Mar 2024 16:16:07 GMT
+ * Generated on Tue, 12 Mar 2024 16:20:18 GMT
  */
 
 :root {
@@ -93,28 +93,27 @@
   --text-color-error: var(--feedback-error-40);
   --text-color-button: var(--action-primary-20);
   --text-color-action: var(--action-primary-20);
-  --border-warning: var(--feedback-warning-60);
-  --border-success: var(--feedback-success-40);
-  --border-error: var(--feedback-error-40);
-  --border-inverse: var(--neutral-100);
-  --border-subtle: var(--neutral-80);
-  --border-assertive: var(--neutral-00);
-  --border-action: var(--action-primary-20);
+  --border-color-warning: var(--feedback-warning-60);
+  --border-color-success: var(--feedback-success-40);
+  --border-color-error: var(--feedback-error-40);
+  --border-color-inverse: var(--neutral-100);
+  --border-color-subtle: var(--neutral-80);
+  --border-color-assertive: var(--neutral-00);
+  --border-color-action: var(--action-primary-20);
   --accent-featured-tag: var(--accent-primary-30);
   --accent-callout: var(--accent-primary-60);
   --action-active: var(--action-primary-20);
   --action-hover: var(--action-primary-20);
   --action-default: var(--action-primary-40);
-  --decorative-icon-subtle-inverse: var(--neutral-100);
-  --decorative-icon-subtle: var(--brand-primary);
+  --icon-decorative-subtle-inverse: var(--neutral-100);
+  --icon-decorative-subtle: var(--brand-primary);
   --size-icon-decorative: var(--space-8x);
   --border-radius-sm: var(--space-sm);
   --border-width-sm: var(--space-sm);
   --border-width-xs: var(--space-xs);
   --border-width-xxs: var(--space-xxs);
-  --ribbon-carbon-background: var(--accent-secondary-60);
   --modal-overlay: var(--transparency-overlay-primary);
-  --image-accent-caption-background: var(--transparency-overlay-primary);
+  --image-inverse-caption-background: var(--transparency-overlay-primary);
   --focus-readonly: var(--neutral-60);
   --focus-error: var(--feedback-error-40);
   --focus-inverse: var(--neutral-100);
@@ -130,10 +129,10 @@
   --tag-assertive-background: var(--surface-assertive);
   --tag-assertive-text: var(--text-color-inverse);
   --tag-default-text: var(--text-color-primary);
-  --tab-selected-border: var(--border-assertive);
-  --tab-active-border: var(--border-action);
-  --tab-hover-border: var(--border-action);
-  --tab-default-border: var(--border-subtle);
+  --tab-selected-border: var(--border-color-assertive);
+  --tab-active-border: var(--border-color-action);
+  --tab-hover-border: var(--border-color-action);
+  --tab-default-border: var(--border-color-subtle);
   --tab-disabled-text: var(--text-color-disabled);
   --tab-active-text: var(--text-color-action);
   --tab-hover-text: var(--text-color-action);
@@ -141,6 +140,7 @@
   --tab-default-text: var(--text-color-subtle);
   --stoplight-warning: var(--icon-color-warning);
   --stoplight-success: var(--icon-color-success);
+  --stoplight-text-inverse: var(--text-color-inverse);
   --stoplight-error: var(--icon-color-error);
   --stoplight-text: var(--text-color-primary);
   --skiplink-background: var(--surface-subtle);
@@ -150,21 +150,21 @@
   --ribbon-text: var(--text-color-primary);
   --modal-default-background: var(--surface-default);
   --modal-text: var(--text-color-primary);
-  --image-accent-caption: var(--text-color-inverse);
+  --image-inverse-caption: var(--text-color-inverse);
   --image-default-caption: var(--text-color-primary);
   --callout-bar: var(--accent-callout);
   --callout-text: var(--text-color-primary);
-  --button-filter-active-border: var(--border-assertive);
+  --button-filter-active-border: var(--border-color-assertive);
   --button-filter-active-icon: var(--icon-color-primary);
   --button-filter-active-text: var(--text-color-primary);
-  --button-filter-hover-border: var(--border-assertive);
+  --button-filter-hover-border: var(--border-color-assertive);
   --button-filter-hover-icon: var(--icon-color-primary);
   --button-filter-hover-text: var(--text-color-primary);
-  --button-filter-border: var(--border-subtle);
+  --button-filter-border: var(--border-color-subtle);
   --button-filter-icon: var(--icon-color-primary);
   --button-filter-text: var(--text-color-primary);
   --button-disabled-background: var(--surface-subtle);
-  --button-disabled-border: var(--border-subtle);
+  --button-disabled-border: var(--border-color-subtle);
   --button-disabled-icon: var(--icon-color-disabled);
   --button-disabled-text: var(--text-color-disabled);
   --button-assertive-active-background: var(--action-active);
@@ -174,7 +174,7 @@
   --button-assertive-hover-icon: var(--icon-color-inverse);
   --button-assertive-hover-text: var(--text-color-inverse);
   --button-assertive-background: var(--action-default);
-  --button-assertive-border: var(--border-action);
+  --button-assertive-border: var(--border-color-action);
   --button-assertive-icon: var(--text-color-inverse);
   --button-assertive-text: var(--text-color-inverse);
   --button-default-active-background: var(--action-active);
@@ -184,18 +184,18 @@
   --button-default-hover-icon: var(--icon-color-inverse);
   --button-default-hover-text: var(--text-color-inverse);
   --button-default-background: var(--surface-default);
-  --button-default-border: var(--border-action);
+  --button-default-border: var(--border-color-action);
   --button-default-icon: var(--icon-color-action);
   --button-default-text: var(--text-color-action);
   --breadcrumbs-default-separator: var(--text-color-primary);
   --breadcrumbs-default-text: var(--text-color-primary);
-  --accordion-warning-border: var(--border-warning);
+  --accordion-warning-border: var(--border-color-warning);
   --accordion-warning-background: var(--surface-warning);
   --accordion-warning-icon: var(--icon-color-warning);
-  --accordion-success-border: var(--border-success);
+  --accordion-success-border: var(--border-color-success);
   --accordion-success-background: var(--surface-success);
   --accordion-success-icon: var(--icon-color-success);
-  --accordion-error-border: var(--border-error);
+  --accordion-error-border: var(--border-color-error);
   --accordion-error-background: var(--surface-error);
   --accordion-error-icon: var(--icon-color-error);
   --accordion-active-icon: var(--icon-color-action);
@@ -204,5 +204,5 @@
   --accordion-hover-text: var(--text-color-action);
   --accordion-default-icon: var(--icon-color-primary);
   --accordion-default-text: var(--text-color-primary);
-  --accordion-default-border: var(--border-subtle);
+  --accordion-default-border: var(--border-color-subtle);
 }

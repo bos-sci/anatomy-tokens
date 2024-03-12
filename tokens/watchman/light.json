@@ -22,34 +22,34 @@
   },
   "borders": {
     "type": "color",
-    "border-action": {
+    "border-color-action": {
       "value": "{action-primary colors.action-primary-20}"
     },
-    "border-assertive": {
+    "border-color-assertive": {
       "value": "{neutral colors.neutral-00}"
     },
-    "border-subtle": {
+    "border-color-subtle": {
       "value": "{neutral colors.neutral-80}"
     },
-    "border-inverse": {
+    "border-color-inverse": {
       "value": "{neutral colors.neutral-100}"
     },
-    "border-error": {
+    "border-color-error": {
       "value": "{feedback-error colors.feedback-error-40}"
     },
-    "border-success": {
+    "border-color-success": {
       "value": "{feedback-success colors.feedback-success-40}"
     },
-    "border-warning": {
+    "border-color-warning": {
       "value": "{feedback-warning colors.feedback-warning-60}"
     }
   },
   "decorative icons": {
     "type": "color",
-    "decorative-icon-subtle": {
+    "icon-decorative-subtle": {
       "value": "{brand colors.brand-primary}"
     },
-    "decorative-icon-subtle-inverse": {
+    "icon-decorative-subtle-inverse": {
       "value": "{neutral colors.neutral-100}"
     }
   },
