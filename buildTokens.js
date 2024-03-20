@@ -75,3 +75,4 @@ brands.forEach((brand) => {
 });
 
 fs.cpSync('src/sass/base-styles', 'lib/scss/base-styles', { recursive: true });
+fs.cpSync('src/fonts', 'lib/fonts', { recursive: true });
