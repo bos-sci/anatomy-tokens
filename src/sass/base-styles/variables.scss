@@ -1,0 +1,71 @@
+/* stylelint-disable declaration-property-value-allowed-list */
+/* stylelint-disable at-rule-allowed-list */
+/* stylelint-disable annotation-no-unknown */
+
+// Box shadows
+$box-shadow-primary: 0 0 $space-lg 0 rgba($neutral-00, 0.2);
+$box-shadow-secondary: 0 $space-xs $space-2x 0 rgba($neutral-00, 0.1);
+$box-shadow-tertiary: 0 $space-xs 0.625rem 0 rgba($neutral-00, 0.2);
+
+// Negative space
+$space-negative-xxs: calc(0rem - $space-xxs);
+$space-negative-xs: calc(0rem - $space-xs);
+
+// App width
+:root {
+  --app-width: 100%;
+}
+
+@media (min-width: $breakpoint-lg-min) {
+  :root {
+    --app-width: 60rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl-min) {
+  :root {
+    --app-width: 71.25rem;
+  }
+}
+
+@media (min-width: $breakpoint-xxl-min) {
+  :root {
+    --app-width: 82.5rem;
+  }
+}
+
+// Type
+$font-path: '../../fonts' !default;
+
+@font-face {
+  font-family: 'SST-Roman';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('#{$font-path}/SST-Roman/SST-Roman.eot');
+  src:
+    url('#{$font-path}/SST-Roman/SST-Roman.woff2') format('woff2'),
+    url('#{$font-path}/SST-Roman/SST-Roman.woff') format('woff'),
+    url('#{$font-path}/SST-Roman/SST-Roman.ttf') format('truetype'),
+    url('#{$font-path}/SST-Roman/SST-Roman.svg#SST-Roman') format('svg'),
+    url('#{$font-path}/SST-Roman/SST-Roman.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'SST-Heavy';
+  font-style: normal;
+  font-weight: 500 900;
+  font-display: fallback;
+  src: url('#{$font-path}/SST-Heavy/SST-Heavy.eot');
+  src:
+    url('#{$font-path}/SST-Heavy/SST-Heavy.woff2') format('woff2'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.woff') format('woff'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.ttf') format('truetype'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.svg#SST-Heavy') format('svg'),
+    url('#{$font-path}/SST-Heavy/SST-Heavy.eot?#iefix') format('embedded-opentype');
+}
+
+$font-family-base-regular: 'SST-Roman', sans-serif;
+$font-family-base-heavy: 'SST-Heavy', sans-serif;
+$font-weight-regular: 400;
+$font-weight-heavy: 900;

@@ -1,6 +1,6 @@
 {
   "name": "@boston-scientific/anatomy-tokens",
-  "version": "4.0.2",
+  "version": "5.0.0-beta.3",
   "description": "Design tokens for Boston Scientific's Anatomy Design System",
   "main": "index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "sass": "sass build/global.scss:build/global.css --watch",
-    "build": "node scss-to-css.js",
+    "build": "node buildTokens.js && prettier --write \"lib\" && stylelint --fix \"lib\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "node updateVersions.js && git add README.md",
     "lint:styles": "stylelint \"**/*.scss\"",
@@ -43,6 +43,7 @@
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "prettier": "^3.0.3",
     "sass": "^1.62.1",
+    "style-dictionary": "^3.9.2",
     "stylelint": "^14.16.1"
   },
   "lint-staged": {
@@ -54,7 +55,13 @@
   "stylelint": {
     "extends": [
       "@boston-scientific/stylelint-config"
-    ]
+    ],
+    "ignoreFiles": [
+      "**/*.less"
+    ],
+    "rules": {
+      "color-no-hex": null
+    }
   },
   "eslintConfig": {
     "extends": [

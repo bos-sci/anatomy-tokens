@@ -1,0 +1,152 @@
+{
+  "brand colors": {
+    "type": "color",
+    "brand-primary": {
+      "value": "#003c71"
+    }
+  },
+  "neutral colors": {
+    "type": "color",
+    "neutral-00": {
+      "value": "#000000"
+    },
+    "neutral-10": {
+      "value": "#1a1a1a"
+    },
+    "neutral-20": {
+      "value": "#333333"
+    },
+    "neutral-40": {
+      "value": "#666666"
+    },
+    "neutral-60": {
+      "value": "#999999"
+    },
+    "neutral-80": {
+      "value": "#cccccc"
+    },
+    "neutral-95": {
+      "value": "#f2f2f2"
+    },
+    "neutral-100": {
+      "value": "#ffffff"
+    }
+  },
+  "action-primary colors": {
+    "type": "color",
+    "action-primary-10": {
+      "value": "#001433"
+    },
+    "action-primary-20": {
+      "value": "#012965"
+    },
+    "action-primary-40": {
+      "value": "#0153cc"
+    },
+    "action-primary-60": {
+      "value": "#3485fe"
+    },
+    "action-primary-80": {
+      "value": "#9ac2fe"
+    },
+    "action-primary-95": {
+      "value": "#e6f0ff"
+    },
+    "action-primary-97": {
+      "value": "#f2f7ff"
+    }
+  },
+  "accent-primary colors": {
+    "type": "color",
+    "accent-primary-20": {
+      "value": "#440066"
+    },
+    "accent-primary-30": {
+      "value": "#660099"
+    },
+    "accent-primary-40": {
+      "value": "#8800cc"
+    },
+    "accent-primary-60": {
+      "value": "#bb33ff"
+    },
+    "accent-primary-80": {
+      "value": "#dd99ff"
+    },
+    "accent-primary-95": {
+      "value": "#f7e6ff"
+    }
+  },
+  "accent-secondary colors": {
+    "type": "color",
+    "accent-secondary-20": {
+      "value": "#005f66"
+    },
+    "accent-secondary-40": {
+      "value": "#00becc"
+    },
+    "accent-secondary-60": {
+      "value": "#00eeff"
+    },
+    "accent-secondary-80": {
+      "value": "#99f8ff"
+    },
+    "accent-secondary-95": {
+      "value": "#e6fdff"
+    }
+  },
+  "feedback-error colors": {
+    "type": "color",
+    "feedback-error-20": {
+      "value": "#590d11"
+    },
+    "feedback-error-40": {
+      "value": "#b31921"
+    },
+    "feedback-error-60": {
+      "value": "#e64d54"
+    },
+    "feedback-error-80": {
+      "value": "#f2a6aa"
+    },
+    "feedback-error-95": {
+      "value": "#fce9ea"
+    }
+  },
+  "feedback-success colors": {
+    "type": "color",
+    "feedback-success-20": {
+      "value": "#165050"
+    },
+    "feedback-success-40": {
+      "value": "#2d9f9f"
+    },
+    "feedback-success-60": {
+      "value": "#60d2d2"
+    },
+    "feedback-success-80": {
+      "value": "#afe9e9"
+    },
+    "feedback-success-95": {
+      "value": "#ebf9f9"
+    }
+  },
+  "feedback-warning colors": {
+    "type": "color",
+    "feedback-warning-20": {
+      "value": "#57450f"
+    },
+    "feedback-warning-40": {
+      "value": "#ad8a1f"
+    },
+    "feedback-warning-60": {
+      "value": "#e0bd52"
+    },
+    "feedback-warning-80": {
+      "value": "#f0dea8"
+    },
+    "feedback-warning-95": {
+      "value": "#fbf7e9"
+    }
+  }
+}

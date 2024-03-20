@@ -1,0 +1,167 @@
+{
+  "action": {
+    "type": "color",
+    "action-default": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "action-hover": {
+      "value": "{action-primary colors.action-primary-20}"
+    },
+    "action-active": {
+      "value": "{action-primary colors.action-primary-20}"
+    }
+  },
+  "accent": {
+    "type": "color",
+    "accent-callout": {
+      "value": "{accent-primary colors.accent-primary-60}"
+    },
+    "accent-featured-tag": {
+      "value": "{accent-primary colors.accent-primary-30}"
+    }
+  },
+  "borders": {
+    "type": "color",
+    "border-color-action": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "border-color-assertive": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "border-color-subtle": {
+      "value": "{neutral colors.neutral-80}"
+    },
+    "border-color-inverse": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "border-color-error": {
+      "value": "{feedback-error colors.feedback-error-40}"
+    },
+    "border-color-success": {
+      "value": "{feedback-success colors.feedback-success-40}"
+    },
+    "border-color-warning": {
+      "value": "{feedback-warning colors.feedback-warning-60}"
+    }
+  },
+  "decorative icons": {
+    "type": "color",
+    "icon-decorative-subtle": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "icon-decorative-subtle-inverse": {
+      "value": "{neutral colors.neutral-100}"
+    }
+  },
+  "focus": {
+    "type": "color",
+    "focus-color-primary": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "focus-color-inverse": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "focus-color-error": {
+      "value": "{feedback-error colors.feedback-error-40}"
+    },
+    "focus-color-readonly": {
+      "value": "{neutral colors.neutral-60}"
+    }
+  },
+  "text": {
+    "type": "color",
+    "text-color-action": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "text-color-button": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "text-color-error": {
+      "value": "{feedback-error colors.feedback-error-40}"
+    },
+    "text-color-disabled": {
+      "value": "{neutral colors.neutral-40}"
+    },
+    "text-color-primary": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "text-color-subtle": {
+      "value": "{neutral colors.neutral-40}"
+    },
+    "text-color-inverse": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "text-color-visited": {
+      "value": "{accent-primary colors.accent-primary-30}"
+    }
+  },
+  "icons": {
+    "type": "color",
+    "icon-color-primary": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "icon-color-action": {
+      "value": "{action-primary colors.action-primary-40}"
+    },
+    "icon-color-subtle": {
+      "value": "{neutral colors.neutral-40}"
+    },
+    "icon-color-disabled": {
+      "value": "{neutral colors.neutral-60}"
+    },
+    "icon-color-inverse": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "icon-color-error": {
+      "value": "{feedback-error colors.feedback-error-40}"
+    },
+    "icon-color-success": {
+      "value": "{feedback-success colors.feedback-success-40}"
+    },
+    "icon-color-warning": {
+      "value": "{feedback-warning colors.feedback-warning-60}"
+    }
+  },
+  "surfaces": {
+    "type": "color",
+    "surface-default": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "surface-inverse": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "surface-assertive": {
+      "value": "{action-primary colors.action-primary-20}"
+    },
+    "surface-subtle": {
+      "value": "{neutral colors.neutral-95}"
+    },
+    "surface-error": {
+      "value": "{feedback-error colors.feedback-error-95}"
+    },
+    "surface-error-assertive": {
+      "value": "{feedback-error colors.feedback-error-40}"
+    },
+    "surface-informational": {
+      "value": "{action-primary colors.action-primary-97}"
+    },
+    "surface-success": {
+      "value": "{feedback-success colors.feedback-success-95}"
+    },
+    "surface-warning": {
+      "value": "{feedback-warning colors.feedback-warning-95}"
+    }
+  },
+  "transparencies": {
+    "type": "color",
+    "transparency-overlay-primary": {
+      "value": "rgba(0, 0, 0, 0.6)"
+    },
+    "transparency-overlay-primary-inverse": {
+      "value": "rgba(255, 255, 255, 0.6)"
+    },
+    "transparency-zero": {
+      "value": "rgba(255, 255, 255, 0)"
+    }
+  }
+}
