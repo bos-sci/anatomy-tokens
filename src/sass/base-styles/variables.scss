@@ -8,8 +8,8 @@ $box-shadow-secondary: 0 $space-xs $space-2x 0 rgba($neutral-00, 0.1);
 $box-shadow-tertiary: 0 $space-xs 0.625rem 0 rgba($neutral-00, 0.2);
 
 // Negative space
-$space-negative-xxs: calc(0 - $space-xxs);
-$space-negative-xs: calc(0 - $space-xs);
+$space-negative-xxs: calc(0rem - $space-xxs);
+$space-negative-xs: calc(0rem - $space-xs);
 
 // App width
 :root {
