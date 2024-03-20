@@ -1,3 +1,4 @@
+import fs from 'fs';
 import StyleDictionary from 'style-dictionary';
 
 StyleDictionary.registerTransform({
@@ -14,14 +15,14 @@ const platformsConfig = {
   }
 };
 
-const getConfig = (theme, mode) => ({
+const getConfig = (destination) => ({
   platforms: {
     scss: {
       transformGroup: 'scss',
       buildPath: 'lib/scss/',
       files: [
         {
-          destination: `${theme}/${mode}.scss`,
+          destination: `${destination}.scss`,
           format: 'scss/variables'
         }
       ],
@@ -32,7 +33,7 @@ const getConfig = (theme, mode) => ({
       buildPath: 'lib/less/',
       files: [
         {
-          destination: `${theme}/${mode}.less`,
+          destination: `${destination}.less`,
           format: 'less/variables'
         }
       ],
@@ -43,7 +44,7 @@ const getConfig = (theme, mode) => ({
       buildPath: 'lib/css/',
       files: [
         {
-          destination: `${theme}/${mode}.css`,
+          destination: `${destination}.css`,
           format: 'css/variables'
         }
       ],
@@ -68,7 +69,9 @@ brands.forEach((brand) => {
     StyleDictionary.extend({
       include: [`tokens/*.json`, `tokens/${brand.name}/globals/*.json`],
       source: [`tokens/${brand.name}/${mode}.json`],
-      ...getConfig(brand.name, mode)
+      ...getConfig(`${brand.name}/${mode}`)
     }).buildAllPlatforms();
   });
 });
+
+fs.cpSync('src/sass/base-styles', 'lib/scss/base-styles', { recursive: true });

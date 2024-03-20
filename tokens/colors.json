@@ -1,0 +1,22 @@
+{
+  "gradients": {
+    "gradient-brand": {
+      "value": "linear-gradient(90deg, {gradient colors.gradient-brand-stop-1}, {gradient colors.gradient-brand-stop-2}, {gradient colors.gradient-brand-stop-3})"
+    },
+    "gradient-primary": {
+      "value": "linear-gradient(90deg, {gradient colors.gradient-primary-stop-1}, {gradient colors.gradient-primary-stop-2})"
+    },
+    "gradient-secondary": {
+      "value": "linear-gradient(90deg, {gradient colors.gradient-secondary-stop-1}, {gradient colors.gradient-secondary-stop-2})"
+    },
+    "gradient-accent": {
+      "value": "linear-gradient(90deg, {gradient colors.gradient-accent-stop-1}, {gradient colors.gradient-accent-stop-2})"
+    },
+    "gradient-assertive": {
+      "value": "linear-gradient(36deg, {gradient colors.gradient-assertive-stop-1}, {gradient colors.gradient-assertive-stop-2})"
+    },
+    "gradient-subtle": {
+      "value": "linear-gradient(322deg, {gradient colors.gradient-subtle-stop-1}, {gradient colors.gradient-subtle-stop-2})"
+    }
+  }
+}

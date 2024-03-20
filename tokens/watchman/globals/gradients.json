@@ -1,0 +1,43 @@
+{
+  "gradient colors": {
+    "gradient-brand-stop-1": {
+      "value": "{brand colors.brand-primary}"
+    },
+    "gradient-brand-stop-2": {
+      "value": "{accent-primary colors.accent-primary-40}"
+    },
+    "gradient-brand-stop-3": {
+      "value": "{accent-secondary colors.accent-secondary-60}"
+    },
+    "gradient-primary-stop-1": {
+      "value": "{accent-primary colors.accent-primary-30}"
+    },
+    "gradient-primary-stop-2": {
+      "value": "{action-primary colors.action-primary-60}"
+    },
+    "gradient-secondary-stop-1": {
+      "value": "{action-primary colors.action-primary-60}"
+    },
+    "gradient-secondary-stop-2": {
+      "value": "{accent-secondary colors.accent-secondary-40}"
+    },
+    "gradient-accent-stop-1": {
+      "value": "{accent-secondary colors.accent-secondary-20}"
+    },
+    "gradient-accent-stop-2": {
+      "value": "{action-primary colors.action-primary-20}"
+    },
+    "gradient-assertive-stop-1": {
+      "value": "{accent-secondary colors.accent-secondary-20}"
+    },
+    "gradient-assertive-stop-2": {
+      "value": "{neutral colors.neutral-00}"
+    },
+    "gradient-subtle-stop-1": {
+      "value": "{neutral colors.neutral-100}"
+    },
+    "gradient-subtle-stop-2": {
+      "value": "{neutral colors.neutral-95}"
+    }
+  }
+}

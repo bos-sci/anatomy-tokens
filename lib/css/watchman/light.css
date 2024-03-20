@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 12 Mar 2024 16:20:18 GMT
+ * Generated on Wed, 20 Mar 2024 19:58:55 GMT
  */
 
 :root {
@@ -93,6 +93,10 @@
   --text-color-error: var(--feedback-error-40);
   --text-color-button: var(--action-primary-20);
   --text-color-action: var(--action-primary-20);
+  --focus-color-readonly: var(--neutral-60);
+  --focus-color-error: var(--feedback-error-40);
+  --focus-color-inverse: var(--neutral-100);
+  --focus-color-primary: var(--action-primary-20);
   --border-color-warning: var(--feedback-warning-60);
   --border-color-success: var(--feedback-success-40);
   --border-color-error: var(--feedback-error-40);
@@ -105,6 +109,19 @@
   --action-active: var(--action-primary-20);
   --action-hover: var(--action-primary-20);
   --action-default: var(--action-primary-40);
+  --gradient-subtle-stop-2: var(--neutral-95);
+  --gradient-subtle-stop-1: var(--neutral-100);
+  --gradient-assertive-stop-2: var(--neutral-00);
+  --gradient-assertive-stop-1: var(--accent-secondary-20);
+  --gradient-accent-stop-2: var(--action-primary-20);
+  --gradient-accent-stop-1: var(--accent-secondary-20);
+  --gradient-secondary-stop-2: var(--accent-secondary-40);
+  --gradient-secondary-stop-1: var(--action-primary-60);
+  --gradient-primary-stop-2: var(--action-primary-60);
+  --gradient-primary-stop-1: var(--accent-primary-30);
+  --gradient-brand-stop-3: var(--accent-secondary-60);
+  --gradient-brand-stop-2: var(--accent-primary-40);
+  --gradient-brand-stop-1: var(--brand-primary);
   --icon-decorative-subtle-inverse: var(--neutral-100);
   --icon-decorative-subtle: var(--brand-primary);
   --size-icon-decorative: var(--space-8x);
@@ -114,10 +131,6 @@
   --border-width-xxs: var(--space-xxs);
   --modal-overlay: var(--transparency-overlay-primary);
   --image-inverse-caption-background: var(--transparency-overlay-primary);
-  --focus-readonly: var(--neutral-60);
-  --focus-error: var(--feedback-error-40);
-  --focus-inverse: var(--neutral-100);
-  --focus-primary: var(--action-primary-20);
   --button-filter-active-background: var(--transparency-zero);
   --button-filter-hover-background: var(--transparency-zero);
   --button-filter-background: var(--transparency-zero);
@@ -205,4 +218,15 @@
   --accordion-default-icon: var(--icon-color-primary);
   --accordion-default-text: var(--text-color-primary);
   --accordion-default-border: var(--border-color-subtle);
+  --gradient-subtle: linear-gradient(322deg, var(--gradient-subtle-stop-1), var(--gradient-subtle-stop-2));
+  --gradient-assertive: linear-gradient(36deg, var(--gradient-assertive-stop-1), var(--gradient-assertive-stop-2));
+  --gradient-accent: linear-gradient(90deg, var(--gradient-accent-stop-1), var(--gradient-accent-stop-2));
+  --gradient-secondary: linear-gradient(90deg, var(--gradient-secondary-stop-1), var(--gradient-secondary-stop-2));
+  --gradient-primary: linear-gradient(90deg, var(--gradient-primary-stop-1), var(--gradient-primary-stop-2));
+  --gradient-brand: linear-gradient(
+    90deg,
+    var(--gradient-brand-stop-1),
+    var(--gradient-brand-stop-2),
+    var(--gradient-brand-stop-3)
+  );
 }

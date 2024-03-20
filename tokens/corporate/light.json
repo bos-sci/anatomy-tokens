@@ -55,16 +55,16 @@
   },
   "focus": {
     "type": "color",
-    "focus-primary": {
+    "focus-color-primary": {
       "value": "{action-primary colors.action-primary-40}"
     },
-    "focus-inverse": {
+    "focus-color-inverse": {
       "value": "{neutral colors.neutral-100}"
     },
-    "focus-error": {
+    "focus-color-error": {
       "value": "{feedback-error colors.feedback-error-40}"
     },
-    "focus-readonly": {
+    "focus-color-readonly": {
       "value": "{neutral colors.neutral-60}"
     }
   },

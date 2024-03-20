@@ -179,21 +179,6 @@
       "value": "{accent.accent-callout}"
     }
   },
-  "focus": {
-    "type": "color",
-    "focus-primary": {
-      "value": "{focus.focus-primary}"
-    },
-    "focus-inverse": {
-      "value": "{focus.focus-inverse}"
-    },
-    "focus-error": {
-      "value": "{focus.focus-error}"
-    },
-    "focus-readonly": {
-      "value": "{focus.focus-readonly}"
-    }
-  },
   "image": {
     "type": "color",
     "image-default-caption": {

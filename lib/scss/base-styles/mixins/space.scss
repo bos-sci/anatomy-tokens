@@ -17,7 +17,9 @@ $space: (
   15x: 7.5rem
 );
 
+// Deprecated: Use space variables instead
 @function space($key) {
+  @warn "Deprecated: Use space variables instead";
   @if map.has-key($space, $key) {
     @return map.get($space, $key);
   }

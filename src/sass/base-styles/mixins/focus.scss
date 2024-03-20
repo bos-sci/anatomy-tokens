@@ -1,0 +1,34 @@
+// Use for most interactive elements on a light background
+@mixin focus-default {
+  box-shadow: none;
+  outline: space(xs) solid $focus-color-primary;
+  outline-offset: space(xs);
+}
+
+// Use for interactive elements on a light background that are contained in wrappers that would conceal the default focus indicator
+@mixin focus-default-inset {
+  box-shadow: inset 0 0 0 space(xs) $focus-color-primary;
+  outline: 0;
+}
+
+// Use for most interactive elements on a dark background
+@mixin focus-inverse {
+  @include focus-default;
+  outline-color: $focus-color-inverse;
+}
+
+// Use for interactive elements on a dark background that are contained in wrappers that would conceal the default focus indicator
+@mixin focus-inverse-inset {
+  box-shadow: inset 0 0 0 space(xs) $focus-color-inverse;
+  outline: 0;
+}
+
+@mixin focus-readonly {
+  @include focus-default;
+  outline-color: $focus-color-readonly;
+}
+
+@mixin focus-error {
+  @include focus-default;
+  outline-color: $focus-color-error;
+}

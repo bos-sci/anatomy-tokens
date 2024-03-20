@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated on Tue, 12 Mar 2024 16:20:18 GMT
+// Generated on Wed, 20 Mar 2024 19:58:55 GMT
 
 @transparency-zero: rgba(255, 255, 255, 0);
 @transparency-overlay-primary-inverse: rgba(255, 255, 255, 0.6);
@@ -90,6 +90,10 @@
 @text-color-error: @feedback-error-60;
 @text-color-button: @neutral-100;
 @text-color-action: @action-primary-95;
+@focus-color-readonly: @neutral-80;
+@focus-color-error: @feedback-error-60;
+@focus-color-inverse: @neutral-00;
+@focus-color-primary: @neutral-100;
 @border-color-warning: @feedback-warning-60;
 @border-color-success: @feedback-success-60;
 @border-color-error: @feedback-error-60;
@@ -102,6 +106,19 @@
 @action-active: @action-primary-80;
 @action-hover: @action-primary-80;
 @action-default: @action-primary-95;
+@gradient-subtle-stop-2: @neutral-95;
+@gradient-subtle-stop-1: @neutral-100;
+@gradient-assertive-stop-2: @neutral-00;
+@gradient-assertive-stop-1: @accent-secondary-20;
+@gradient-accent-stop-2: @action-primary-20;
+@gradient-accent-stop-1: @accent-secondary-20;
+@gradient-secondary-stop-2: @accent-secondary-40;
+@gradient-secondary-stop-1: @action-primary-60;
+@gradient-primary-stop-2: @action-primary-60;
+@gradient-primary-stop-1: @accent-primary-30;
+@gradient-brand-stop-3: @accent-secondary-60;
+@gradient-brand-stop-2: @accent-primary-40;
+@gradient-brand-stop-1: @brand-primary;
 @icon-decorative-subtle-inverse: @neutral-100;
 @icon-decorative-subtle: @brand-primary;
 @size-icon-decorative: @space-8x;
@@ -111,10 +128,6 @@
 @border-width-xxs: @space-xxs;
 @modal-overlay: @transparency-overlay-primary;
 @image-inverse-caption-background: @transparency-overlay-primary;
-@focus-readonly: @neutral-80;
-@focus-error: @feedback-error-60;
-@focus-inverse: @neutral-00;
-@focus-primary: @neutral-100;
 @button-filter-active-background: @transparency-zero;
 @button-filter-hover-background: @transparency-zero;
 @button-filter-background: @transparency-zero;
@@ -202,3 +215,9 @@
 @accordion-default-icon: @icon-color-primary;
 @accordion-default-text: @text-color-primary;
 @accordion-default-border: @border-color-subtle;
+@gradient-subtle: linear-gradient(322deg, @gradient-subtle-stop-1, @gradient-subtle-stop-2);
+@gradient-assertive: linear-gradient(36deg, @gradient-assertive-stop-1, @gradient-assertive-stop-2);
+@gradient-accent: linear-gradient(90deg, @gradient-accent-stop-1, @gradient-accent-stop-2);
+@gradient-secondary: linear-gradient(90deg, @gradient-secondary-stop-1, @gradient-secondary-stop-2);
+@gradient-primary: linear-gradient(90deg, @gradient-primary-stop-1, @gradient-primary-stop-2);
+@gradient-brand: linear-gradient(90deg, @gradient-brand-stop-1, @gradient-brand-stop-2, @gradient-brand-stop-3);

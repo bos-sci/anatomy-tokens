@@ -1,6 +1,40 @@
 /* stylelint-disable declaration-property-value-allowed-list */
 /* stylelint-disable at-rule-allowed-list */
 /* stylelint-disable annotation-no-unknown */
+
+// Box shadows
+$box-shadow-primary: 0 0 $space-lg 0 rgba($neutral-00, 0.2);
+$box-shadow-secondary: 0 $space-xs $space-2x 0 rgba($neutral-00, 0.1);
+$box-shadow-tertiary: 0 $space-xs 0.625rem 0 rgba($neutral-00, 0.2);
+
+// Negative space
+$space-negative-xxs: calc(0 - $space-xxs);
+$space-negative-xs: calc(0 - $space-xs);
+
+// App width
+:root {
+  --app-width: 100%;
+}
+
+@media (min-width: $breakpoint-lg-min) {
+  :root {
+    --app-width: 60rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl-min) {
+  :root {
+    --app-width: 71.25rem;
+  }
+}
+
+@media (min-width: $breakpoint-xxl-min) {
+  :root {
+    --app-width: 82.5rem;
+  }
+}
+
+// Type
 $font-path: '../../fonts' !default;
 
 @font-face {
@@ -35,4 +69,3 @@ $font-family-base-regular: 'SST-Roman', sans-serif;
 $font-family-base-heavy: 'SST-Heavy', sans-serif;
 $font-weight-regular: 400;
 $font-weight-heavy: 900;
-$letter-spacing-increase: 0.075rem;
